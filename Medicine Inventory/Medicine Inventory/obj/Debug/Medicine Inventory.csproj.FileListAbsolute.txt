@@ -1,0 +1,15 @@
+C:\Users\pc9\source\repos\Medicine Inventory\Medicine Inventory\bin\Debug\Medicine Inventory.exe.config
+C:\Users\pc9\source\repos\Medicine Inventory\Medicine Inventory\bin\Debug\Medicine Inventory.exe
+C:\Users\pc9\source\repos\Medicine Inventory\Medicine Inventory\bin\Debug\Medicine Inventory.pdb
+C:\Users\pc9\source\repos\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine Inventory.csproj.AssemblyReference.cache
+C:\Users\pc9\source\repos\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine Inventory.csproj.SuggestedBindingRedirects.cache
+C:\Users\pc9\source\repos\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine_Inventory.Form1.resources
+C:\Users\pc9\source\repos\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine_Inventory.Properties.Resources.resources
+C:\Users\pc9\source\repos\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine Inventory.csproj.GenerateResource.cache
+C:\Users\pc9\source\repos\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine Inventory.csproj.CoreCompileInputs.cache
+C:\Users\pc9\source\repos\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine Inventory.exe
+C:\Users\pc9\source\repos\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine Inventory.pdb
+C:\Users\pc9\source\repos\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine_Inventory.formHCDistribution.resources
+C:\Users\pc9\source\repos\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine_Inventory.formHCUtilization.resources
+C:\Users\pc9\source\repos\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine_Inventory.formPurchaseOrder.resources
+C:\Users\pc9\source\repos\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine_Inventory.formOthers.resources
