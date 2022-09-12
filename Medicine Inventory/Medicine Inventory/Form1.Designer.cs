@@ -29,27 +29,29 @@
         private void InitializeComponent()
         {
             this.pnlSideMenuBar = new System.Windows.Forms.Panel();
-            this.pnlTransactionSubMenu = new System.Windows.Forms.Panel();
-            this.btnTransaction = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnHCDistribution = new System.Windows.Forms.Button();
-            this.btnHCUtilization = new System.Windows.Forms.Button();
-            this.btnPurchased = new System.Windows.Forms.Button();
-            this.btnOthers = new System.Windows.Forms.Button();
-            this.btnReports = new System.Windows.Forms.Button();
+            this.btnSetupMenu = new System.Windows.Forms.Button();
             this.pnlReportSubMenu = new System.Windows.Forms.Panel();
             this.btnHOInventory = new System.Windows.Forms.Button();
             this.btnHCInventory = new System.Windows.Forms.Button();
             this.btnAccountReport = new System.Windows.Forms.Button();
+            this.btnReports = new System.Windows.Forms.Button();
+            this.pnlTransactionSubMenu = new System.Windows.Forms.Panel();
+            this.btnOthers = new System.Windows.Forms.Button();
+            this.btnPurchased = new System.Windows.Forms.Button();
+            this.btnHCUtilization = new System.Windows.Forms.Button();
+            this.btnHCDistribution = new System.Windows.Forms.Button();
+            this.btnTransaction = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pnlChildForm = new System.Windows.Forms.Panel();
             this.pnlSideMenuBar.SuspendLayout();
-            this.pnlTransactionSubMenu.SuspendLayout();
             this.pnlReportSubMenu.SuspendLayout();
+            this.pnlTransactionSubMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlSideMenuBar
             // 
             this.pnlSideMenuBar.BackColor = System.Drawing.Color.DarkGreen;
+            this.pnlSideMenuBar.Controls.Add(this.btnSetupMenu);
             this.pnlSideMenuBar.Controls.Add(this.pnlReportSubMenu);
             this.pnlSideMenuBar.Controls.Add(this.btnReports);
             this.pnlSideMenuBar.Controls.Add(this.pnlTransactionSubMenu);
@@ -61,128 +63,22 @@
             this.pnlSideMenuBar.Size = new System.Drawing.Size(284, 761);
             this.pnlSideMenuBar.TabIndex = 0;
             // 
-            // pnlTransactionSubMenu
+            // btnSetupMenu
             // 
-            this.pnlTransactionSubMenu.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.pnlTransactionSubMenu.Controls.Add(this.btnOthers);
-            this.pnlTransactionSubMenu.Controls.Add(this.btnPurchased);
-            this.pnlTransactionSubMenu.Controls.Add(this.btnHCUtilization);
-            this.pnlTransactionSubMenu.Controls.Add(this.btnHCDistribution);
-            this.pnlTransactionSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTransactionSubMenu.Location = new System.Drawing.Point(0, 215);
-            this.pnlTransactionSubMenu.Name = "pnlTransactionSubMenu";
-            this.pnlTransactionSubMenu.Size = new System.Drawing.Size(284, 201);
-            this.pnlTransactionSubMenu.TabIndex = 2;
-            // 
-            // btnTransaction
-            // 
-            this.btnTransaction.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTransaction.FlatAppearance.BorderSize = 0;
-            this.btnTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTransaction.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTransaction.ForeColor = System.Drawing.Color.Snow;
-            this.btnTransaction.Location = new System.Drawing.Point(0, 169);
-            this.btnTransaction.Name = "btnTransaction";
-            this.btnTransaction.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnTransaction.Size = new System.Drawing.Size(284, 46);
-            this.btnTransaction.TabIndex = 1;
-            this.btnTransaction.Text = "Transactions";
-            this.btnTransaction.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTransaction.UseVisualStyleBackColor = true;
-            this.btnTransaction.Click += new System.EventHandler(this.btnTransaction_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(284, 169);
-            this.panel1.TabIndex = 0;
-            // 
-            // btnHCDistribution
-            // 
-            this.btnHCDistribution.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHCDistribution.FlatAppearance.BorderSize = 0;
-            this.btnHCDistribution.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHCDistribution.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHCDistribution.ForeColor = System.Drawing.Color.Snow;
-            this.btnHCDistribution.Location = new System.Drawing.Point(0, 0);
-            this.btnHCDistribution.Name = "btnHCDistribution";
-            this.btnHCDistribution.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnHCDistribution.Size = new System.Drawing.Size(284, 46);
-            this.btnHCDistribution.TabIndex = 3;
-            this.btnHCDistribution.Text = "Health Center Distribution";
-            this.btnHCDistribution.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHCDistribution.UseVisualStyleBackColor = true;
-            this.btnHCDistribution.Click += new System.EventHandler(this.btnHCDistribution_Click);
-            // 
-            // btnHCUtilization
-            // 
-            this.btnHCUtilization.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHCUtilization.FlatAppearance.BorderSize = 0;
-            this.btnHCUtilization.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHCUtilization.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHCUtilization.ForeColor = System.Drawing.Color.Snow;
-            this.btnHCUtilization.Location = new System.Drawing.Point(0, 46);
-            this.btnHCUtilization.Name = "btnHCUtilization";
-            this.btnHCUtilization.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnHCUtilization.Size = new System.Drawing.Size(284, 46);
-            this.btnHCUtilization.TabIndex = 4;
-            this.btnHCUtilization.Text = "Health Center Utilization";
-            this.btnHCUtilization.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHCUtilization.UseVisualStyleBackColor = true;
-            this.btnHCUtilization.Click += new System.EventHandler(this.btnHCUtilization_Click);
-            // 
-            // btnPurchased
-            // 
-            this.btnPurchased.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPurchased.FlatAppearance.BorderSize = 0;
-            this.btnPurchased.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPurchased.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPurchased.ForeColor = System.Drawing.Color.Snow;
-            this.btnPurchased.Location = new System.Drawing.Point(0, 92);
-            this.btnPurchased.Name = "btnPurchased";
-            this.btnPurchased.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnPurchased.Size = new System.Drawing.Size(284, 46);
-            this.btnPurchased.TabIndex = 5;
-            this.btnPurchased.Text = "Purchase Order";
-            this.btnPurchased.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPurchased.UseVisualStyleBackColor = true;
-            this.btnPurchased.Click += new System.EventHandler(this.btnPurchased_Click);
-            // 
-            // btnOthers
-            // 
-            this.btnOthers.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnOthers.FlatAppearance.BorderSize = 0;
-            this.btnOthers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOthers.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOthers.ForeColor = System.Drawing.Color.Snow;
-            this.btnOthers.Location = new System.Drawing.Point(0, 138);
-            this.btnOthers.Name = "btnOthers";
-            this.btnOthers.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnOthers.Size = new System.Drawing.Size(284, 46);
-            this.btnOthers.TabIndex = 6;
-            this.btnOthers.Text = "Others";
-            this.btnOthers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOthers.UseVisualStyleBackColor = true;
-            this.btnOthers.Click += new System.EventHandler(this.btnOthers_Click);
-            // 
-            // btnReports
-            // 
-            this.btnReports.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReports.FlatAppearance.BorderSize = 0;
-            this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReports.ForeColor = System.Drawing.Color.Snow;
-            this.btnReports.Location = new System.Drawing.Point(0, 416);
-            this.btnReports.Name = "btnReports";
-            this.btnReports.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnReports.Size = new System.Drawing.Size(284, 46);
-            this.btnReports.TabIndex = 3;
-            this.btnReports.Text = "Reports";
-            this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReports.UseVisualStyleBackColor = true;
-            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
+            this.btnSetupMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSetupMenu.FlatAppearance.BorderSize = 0;
+            this.btnSetupMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetupMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetupMenu.ForeColor = System.Drawing.Color.Snow;
+            this.btnSetupMenu.Location = new System.Drawing.Point(0, 663);
+            this.btnSetupMenu.Name = "btnSetupMenu";
+            this.btnSetupMenu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnSetupMenu.Size = new System.Drawing.Size(284, 46);
+            this.btnSetupMenu.TabIndex = 5;
+            this.btnSetupMenu.Text = "Setup";
+            this.btnSetupMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSetupMenu.UseVisualStyleBackColor = true;
+            this.btnSetupMenu.Click += new System.EventHandler(this.btnSetupMenu_Click);
             // 
             // pnlReportSubMenu
             // 
@@ -247,6 +143,129 @@
             this.btnAccountReport.UseVisualStyleBackColor = true;
             this.btnAccountReport.Click += new System.EventHandler(this.btnAccountReport_Click);
             // 
+            // btnReports
+            // 
+            this.btnReports.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReports.FlatAppearance.BorderSize = 0;
+            this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReports.ForeColor = System.Drawing.Color.Snow;
+            this.btnReports.Location = new System.Drawing.Point(0, 416);
+            this.btnReports.Name = "btnReports";
+            this.btnReports.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnReports.Size = new System.Drawing.Size(284, 46);
+            this.btnReports.TabIndex = 3;
+            this.btnReports.Text = "Reports";
+            this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReports.UseVisualStyleBackColor = true;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
+            // 
+            // pnlTransactionSubMenu
+            // 
+            this.pnlTransactionSubMenu.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.pnlTransactionSubMenu.Controls.Add(this.btnOthers);
+            this.pnlTransactionSubMenu.Controls.Add(this.btnPurchased);
+            this.pnlTransactionSubMenu.Controls.Add(this.btnHCUtilization);
+            this.pnlTransactionSubMenu.Controls.Add(this.btnHCDistribution);
+            this.pnlTransactionSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTransactionSubMenu.Location = new System.Drawing.Point(0, 215);
+            this.pnlTransactionSubMenu.Name = "pnlTransactionSubMenu";
+            this.pnlTransactionSubMenu.Size = new System.Drawing.Size(284, 201);
+            this.pnlTransactionSubMenu.TabIndex = 2;
+            // 
+            // btnOthers
+            // 
+            this.btnOthers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOthers.FlatAppearance.BorderSize = 0;
+            this.btnOthers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOthers.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOthers.ForeColor = System.Drawing.Color.Snow;
+            this.btnOthers.Location = new System.Drawing.Point(0, 138);
+            this.btnOthers.Name = "btnOthers";
+            this.btnOthers.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnOthers.Size = new System.Drawing.Size(284, 46);
+            this.btnOthers.TabIndex = 6;
+            this.btnOthers.Text = "Others";
+            this.btnOthers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOthers.UseVisualStyleBackColor = true;
+            this.btnOthers.Click += new System.EventHandler(this.btnOthers_Click);
+            // 
+            // btnPurchased
+            // 
+            this.btnPurchased.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPurchased.FlatAppearance.BorderSize = 0;
+            this.btnPurchased.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPurchased.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPurchased.ForeColor = System.Drawing.Color.Snow;
+            this.btnPurchased.Location = new System.Drawing.Point(0, 92);
+            this.btnPurchased.Name = "btnPurchased";
+            this.btnPurchased.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnPurchased.Size = new System.Drawing.Size(284, 46);
+            this.btnPurchased.TabIndex = 5;
+            this.btnPurchased.Text = "Purchase Order";
+            this.btnPurchased.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPurchased.UseVisualStyleBackColor = true;
+            this.btnPurchased.Click += new System.EventHandler(this.btnPurchased_Click);
+            // 
+            // btnHCUtilization
+            // 
+            this.btnHCUtilization.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHCUtilization.FlatAppearance.BorderSize = 0;
+            this.btnHCUtilization.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHCUtilization.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHCUtilization.ForeColor = System.Drawing.Color.Snow;
+            this.btnHCUtilization.Location = new System.Drawing.Point(0, 46);
+            this.btnHCUtilization.Name = "btnHCUtilization";
+            this.btnHCUtilization.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnHCUtilization.Size = new System.Drawing.Size(284, 46);
+            this.btnHCUtilization.TabIndex = 4;
+            this.btnHCUtilization.Text = "Health Center Utilization";
+            this.btnHCUtilization.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHCUtilization.UseVisualStyleBackColor = true;
+            this.btnHCUtilization.Click += new System.EventHandler(this.btnHCUtilization_Click);
+            // 
+            // btnHCDistribution
+            // 
+            this.btnHCDistribution.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHCDistribution.FlatAppearance.BorderSize = 0;
+            this.btnHCDistribution.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHCDistribution.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHCDistribution.ForeColor = System.Drawing.Color.Snow;
+            this.btnHCDistribution.Location = new System.Drawing.Point(0, 0);
+            this.btnHCDistribution.Name = "btnHCDistribution";
+            this.btnHCDistribution.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnHCDistribution.Size = new System.Drawing.Size(284, 46);
+            this.btnHCDistribution.TabIndex = 3;
+            this.btnHCDistribution.Text = "Health Center Distribution";
+            this.btnHCDistribution.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHCDistribution.UseVisualStyleBackColor = true;
+            this.btnHCDistribution.Click += new System.EventHandler(this.btnHCDistribution_Click);
+            // 
+            // btnTransaction
+            // 
+            this.btnTransaction.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTransaction.FlatAppearance.BorderSize = 0;
+            this.btnTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTransaction.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTransaction.ForeColor = System.Drawing.Color.Snow;
+            this.btnTransaction.Location = new System.Drawing.Point(0, 169);
+            this.btnTransaction.Name = "btnTransaction";
+            this.btnTransaction.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnTransaction.Size = new System.Drawing.Size(284, 46);
+            this.btnTransaction.TabIndex = 1;
+            this.btnTransaction.Text = "Transactions";
+            this.btnTransaction.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTransaction.UseVisualStyleBackColor = true;
+            this.btnTransaction.Click += new System.EventHandler(this.btnTransaction_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(284, 169);
+            this.panel1.TabIndex = 0;
+            // 
             // pnlChildForm
             // 
             this.pnlChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -265,8 +284,8 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.pnlSideMenuBar.ResumeLayout(false);
-            this.pnlTransactionSubMenu.ResumeLayout(false);
             this.pnlReportSubMenu.ResumeLayout(false);
+            this.pnlTransactionSubMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -287,6 +306,7 @@
         private System.Windows.Forms.Button btnAccountReport;
         private System.Windows.Forms.Button btnReports;
         private System.Windows.Forms.Panel pnlChildForm;
+        private System.Windows.Forms.Button btnSetupMenu;
     }
 }
 

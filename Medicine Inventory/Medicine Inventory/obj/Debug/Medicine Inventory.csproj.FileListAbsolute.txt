@@ -13,3 +13,21 @@ C:\Users\pc9\source\repos\Medicine Inventory\Medicine Inventory\obj\Debug\Medici
 C:\Users\pc9\source\repos\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine_Inventory.formHCUtilization.resources
 C:\Users\pc9\source\repos\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine_Inventory.formPurchaseOrder.resources
 C:\Users\pc9\source\repos\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine_Inventory.formOthers.resources
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine Inventory.csproj.AssemblyReference.cache
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine Inventory.csproj.SuggestedBindingRedirects.cache
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine_Inventory.Form1.resources
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine_Inventory.formHCDistribution.resources
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine_Inventory.formHCUtilization.resources
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine_Inventory.formOthers.resources
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine_Inventory.formPurchaseOrder.resources
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine_Inventory.formSetup.resources
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine_Inventory.Properties.Resources.resources
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine Inventory.csproj.GenerateResource.cache
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine Inventory.csproj.CoreCompileInputs.cache
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine Inventory.exe
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine Inventory.pdb
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\bin\Debug\MedicineInventory.mdf
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\bin\Debug\MedicineInventory_log.ldf
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\bin\Debug\Medicine Inventory.exe.config
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\bin\Debug\Medicine Inventory.exe
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\bin\Debug\Medicine Inventory.pdb

@@ -49,6 +49,24 @@ namespace Medicine_Inventory
             }
         }
 
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            pnlChildForm.Controls.Add(childForm);
+            pnlChildForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+
+        }
+
         #region Transaction SubMenu
         private void btnTransaction_Click(object sender, EventArgs e)
         {
@@ -114,23 +132,13 @@ namespace Medicine_Inventory
         }
         #endregion
 
+       
 
-        private Form activeForm = null;
-        private void openChildForm(Form childForm)
+        #region Setup
+        private void btnSetupMenu_Click(object sender, EventArgs e)
         {
-            if (activeForm != null)
-            {
-                activeForm.Close();
-            }
-            activeForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;    
-            pnlChildForm.Controls.Add(childForm);
-            pnlChildForm.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show(); 
-
+            openChildForm(new formSetup());
         }
+        #endregion
     }
 }

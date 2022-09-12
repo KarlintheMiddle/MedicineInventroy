@@ -22,5 +22,10 @@ namespace Medicine_Inventory
         {
 
         }
+
+        private void medicineBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
