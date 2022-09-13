@@ -30,18 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.txtboxItemCodeSetup = new System.Windows.Forms.TextBox();
+            this.txtboxSupplierSetup = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.numUDIntBalSetup = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtboxUOMSetup = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.numUDPriceSetup = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.txtboxMedicineSetup = new System.Windows.Forms.TextBox();
-            this.numUDPriceSetup = new System.Windows.Forms.NumericUpDown();
-            this.txtboxUOMSetup = new System.Windows.Forms.TextBox();
-            this.numUDIntBalSetup = new System.Windows.Forms.NumericUpDown();
-            this.txtboxSupplierSetup = new System.Windows.Forms.TextBox();
-            this.txtboxItemCodeSetup = new System.Windows.Forms.TextBox();
+            this.txtboxMedicineID = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.medicineBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -49,8 +51,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnSubmitSetup = new System.Windows.Forms.Button();
             this.medicineTableAdapter = new Medicine_Inventory.MedicineInventoryDataSetTableAdapters.MedicineTableAdapter();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnUpdateSetup = new System.Windows.Forms.Button();
             this.btnDeleteSetup = new System.Windows.Forms.Button();
             this.dgvMedicine = new System.Windows.Forms.DataGridView();
@@ -62,8 +62,8 @@
             this.supplierDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numUDPriceSetup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUDIntBalSetup)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUDPriceSetup)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.medicineBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medicineInventoryDataSet)).BeginInit();
@@ -88,7 +88,7 @@
             this.tableLayoutPanel1.Controls.Add(this.numUDPriceSetup, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtboxMedicineSetup, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txtboxMedicineID, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 153);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
@@ -103,6 +103,17 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(370, 273);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+            // label9
+            // 
+            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(3, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(138, 39);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Medicine ID";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
             // label8
             // 
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -113,6 +124,24 @@
             this.label8.TabIndex = 10;
             this.label8.Text = "Item Code:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // txtboxItemCodeSetup
+            // 
+            this.txtboxItemCodeSetup.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtboxItemCodeSetup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxItemCodeSetup.Location = new System.Drawing.Point(147, 247);
+            this.txtboxItemCodeSetup.Name = "txtboxItemCodeSetup";
+            this.txtboxItemCodeSetup.Size = new System.Drawing.Size(220, 23);
+            this.txtboxItemCodeSetup.TabIndex = 6;
+            // 
+            // txtboxSupplierSetup
+            // 
+            this.txtboxSupplierSetup.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtboxSupplierSetup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxSupplierSetup.Location = new System.Drawing.Point(147, 208);
+            this.txtboxSupplierSetup.Name = "txtboxSupplierSetup";
+            this.txtboxSupplierSetup.Size = new System.Drawing.Size(220, 23);
+            this.txtboxSupplierSetup.TabIndex = 5;
             // 
             // label7
             // 
@@ -136,6 +165,21 @@
             this.label6.Text = "Initial Balance:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
+            // numUDIntBalSetup
+            // 
+            this.numUDIntBalSetup.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.numUDIntBalSetup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numUDIntBalSetup.Location = new System.Drawing.Point(147, 169);
+            this.numUDIntBalSetup.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
+            this.numUDIntBalSetup.Name = "numUDIntBalSetup";
+            this.numUDIntBalSetup.Size = new System.Drawing.Size(220, 23);
+            this.numUDIntBalSetup.TabIndex = 4;
+            this.numUDIntBalSetup.Enter += new System.EventHandler(this.numUDIntBalSetup_Enter);
+            // 
             // label5
             // 
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -147,6 +191,15 @@
             this.label5.Text = "Units of Measure:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
+            // txtboxUOMSetup
+            // 
+            this.txtboxUOMSetup.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtboxUOMSetup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxUOMSetup.Location = new System.Drawing.Point(147, 130);
+            this.txtboxUOMSetup.Name = "txtboxUOMSetup";
+            this.txtboxUOMSetup.Size = new System.Drawing.Size(220, 23);
+            this.txtboxUOMSetup.TabIndex = 3;
+            // 
             // label4
             // 
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -157,6 +210,21 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "Price:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // numUDPriceSetup
+            // 
+            this.numUDPriceSetup.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.numUDPriceSetup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numUDPriceSetup.Location = new System.Drawing.Point(147, 91);
+            this.numUDPriceSetup.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
+            this.numUDPriceSetup.Name = "numUDPriceSetup";
+            this.numUDPriceSetup.Size = new System.Drawing.Size(220, 23);
+            this.numUDPriceSetup.TabIndex = 2;
+            this.numUDPriceSetup.Enter += new System.EventHandler(this.numUDPriceSetup_Enter);
             // 
             // label3
             // 
@@ -178,50 +246,16 @@
             this.txtboxMedicineSetup.Size = new System.Drawing.Size(220, 23);
             this.txtboxMedicineSetup.TabIndex = 1;
             // 
-            // numUDPriceSetup
+            // txtboxMedicineID
             // 
-            this.numUDPriceSetup.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.numUDPriceSetup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numUDPriceSetup.Location = new System.Drawing.Point(147, 91);
-            this.numUDPriceSetup.Name = "numUDPriceSetup";
-            this.numUDPriceSetup.Size = new System.Drawing.Size(220, 23);
-            this.numUDPriceSetup.TabIndex = 2;
-            // 
-            // txtboxUOMSetup
-            // 
-            this.txtboxUOMSetup.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtboxUOMSetup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxUOMSetup.Location = new System.Drawing.Point(147, 130);
-            this.txtboxUOMSetup.Name = "txtboxUOMSetup";
-            this.txtboxUOMSetup.Size = new System.Drawing.Size(220, 23);
-            this.txtboxUOMSetup.TabIndex = 3;
-            // 
-            // numUDIntBalSetup
-            // 
-            this.numUDIntBalSetup.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.numUDIntBalSetup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numUDIntBalSetup.Location = new System.Drawing.Point(147, 169);
-            this.numUDIntBalSetup.Name = "numUDIntBalSetup";
-            this.numUDIntBalSetup.Size = new System.Drawing.Size(220, 23);
-            this.numUDIntBalSetup.TabIndex = 4;
-            // 
-            // txtboxSupplierSetup
-            // 
-            this.txtboxSupplierSetup.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtboxSupplierSetup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxSupplierSetup.Location = new System.Drawing.Point(147, 208);
-            this.txtboxSupplierSetup.Name = "txtboxSupplierSetup";
-            this.txtboxSupplierSetup.Size = new System.Drawing.Size(220, 23);
-            this.txtboxSupplierSetup.TabIndex = 5;
-            // 
-            // txtboxItemCodeSetup
-            // 
-            this.txtboxItemCodeSetup.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtboxItemCodeSetup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxItemCodeSetup.Location = new System.Drawing.Point(147, 247);
-            this.txtboxItemCodeSetup.Name = "txtboxItemCodeSetup";
-            this.txtboxItemCodeSetup.Size = new System.Drawing.Size(220, 23);
-            this.txtboxItemCodeSetup.TabIndex = 6;
+            this.txtboxMedicineID.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtboxMedicineID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxMedicineID.Location = new System.Drawing.Point(147, 13);
+            this.txtboxMedicineID.Name = "txtboxMedicineID";
+            this.txtboxMedicineID.ReadOnly = true;
+            this.txtboxMedicineID.Size = new System.Drawing.Size(220, 23);
+            this.txtboxMedicineID.TabIndex = 10;
+            this.txtboxMedicineID.TabStop = false;
             // 
             // panel1
             // 
@@ -273,34 +307,14 @@
             this.btnSubmitSetup.Location = new System.Drawing.Point(18, 432);
             this.btnSubmitSetup.Name = "btnSubmitSetup";
             this.btnSubmitSetup.Size = new System.Drawing.Size(361, 48);
-            this.btnSubmitSetup.TabIndex = 4;
+            this.btnSubmitSetup.TabIndex = 7;
             this.btnSubmitSetup.Text = "Submit";
             this.btnSubmitSetup.UseVisualStyleBackColor = false;
+            this.btnSubmitSetup.Click += new System.EventHandler(this.btnSubmitSetup_Click);
             // 
             // medicineTableAdapter
             // 
             this.medicineTableAdapter.ClearBeforeFill = true;
-            // 
-            // label9
-            // 
-            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(3, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(138, 39);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "Medicine ID";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(147, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(220, 23);
-            this.textBox1.TabIndex = 12;
             // 
             // btnUpdateSetup
             // 
@@ -312,7 +326,7 @@
             this.btnUpdateSetup.Location = new System.Drawing.Point(18, 486);
             this.btnUpdateSetup.Name = "btnUpdateSetup";
             this.btnUpdateSetup.Size = new System.Drawing.Size(361, 48);
-            this.btnUpdateSetup.TabIndex = 5;
+            this.btnUpdateSetup.TabIndex = 8;
             this.btnUpdateSetup.Text = "Update";
             this.btnUpdateSetup.UseVisualStyleBackColor = false;
             // 
@@ -326,7 +340,7 @@
             this.btnDeleteSetup.Location = new System.Drawing.Point(18, 540);
             this.btnDeleteSetup.Name = "btnDeleteSetup";
             this.btnDeleteSetup.Size = new System.Drawing.Size(361, 48);
-            this.btnDeleteSetup.TabIndex = 6;
+            this.btnDeleteSetup.TabIndex = 9;
             this.btnDeleteSetup.Text = "Delete";
             this.btnDeleteSetup.UseVisualStyleBackColor = false;
             // 
@@ -353,7 +367,7 @@
             this.dgvMedicine.Name = "dgvMedicine";
             this.dgvMedicine.ReadOnly = true;
             this.dgvMedicine.Size = new System.Drawing.Size(631, 629);
-            this.dgvMedicine.TabIndex = 7;
+            this.dgvMedicine.TabIndex = 13;
             // 
             // medicineIDDataGridViewTextBoxColumn
             // 
@@ -430,8 +444,8 @@
             this.Load += new System.EventHandler(this.formSetup_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numUDPriceSetup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUDIntBalSetup)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUDPriceSetup)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.medicineBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.medicineInventoryDataSet)).EndInit();
@@ -463,7 +477,7 @@
         private System.Windows.Forms.BindingSource medicineBindingSource;
         private MedicineInventoryDataSetTableAdapters.MedicineTableAdapter medicineTableAdapter;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtboxMedicineID;
         private System.Windows.Forms.Button btnUpdateSetup;
         private System.Windows.Forms.Button btnDeleteSetup;
         private System.Windows.Forms.DataGridView dgvMedicine;

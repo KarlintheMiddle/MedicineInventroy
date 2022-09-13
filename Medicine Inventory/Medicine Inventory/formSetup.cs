@@ -41,6 +41,53 @@ namespace Medicine_Inventory
             dgvMedicine.DataSource = dt;
         }
 
-        
+        private void saveMedicineRecord()
+        {
+            string insertQuery = "insert into Medicine ([Medicine],[Price],[UOM],[Balance],[Supplier],[ItemCode]) values (@medicine,@price,@uom,@balance,@supplier,@itemcode)";
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand(insertQuery, cn))
+                {   
+                    //Create and set parameters value
+                    cmd.Parameters.Add("@medicine", SqlDbType.NVarChar).Value = txtboxMedicineSetup.Text;
+                    cmd.Parameters.Add("@price", SqlDbType.Money).Value = numUDPriceSetup.Value;
+                    cmd.Parameters.Add("@uom", SqlDbType.NChar).Value = txtboxUOMSetup.Text;
+                    cmd.Parameters.Add("@balance", SqlDbType.Float).Value = numUDIntBalSetup.Value;
+                    cmd.Parameters.Add("@supplier", SqlDbType.NVarChar).Value = txtboxSupplierSetup.Text;
+                    cmd.Parameters.Add("@itemcode", SqlDbType.NVarChar).Value = txtboxItemCodeSetup.Text;
+
+                    int rowsAdded = cmd.ExecuteNonQuery();
+                    if (rowsAdded > 0)
+                    {
+                        MessageBox.Show("Row Inserted!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No Row Inserted!");
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message);
+            }
+        }
+
+        private void btnSubmitSetup_Click(object sender, EventArgs e)
+        {
+            saveMedicineRecord();
+            getMedicineRecord();
+        }
+
+        private void numUDPriceSetup_Enter(object sender, EventArgs eventArgs)
+        {
+            numUDPriceSetup.Select(0, numUDPriceSetup.Text.Length);
+        }
+
+        private void numUDIntBalSetup_Enter(object sender, EventArgs eventArgs)
+        {
+            numUDIntBalSetup.Select(0, numUDIntBalSetup.Text.Length);
+        }
+
     }
 }
