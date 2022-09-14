@@ -38,7 +38,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.numUDIntBalSetup = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtboxUOMSetup = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.numUDPriceSetup = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
@@ -61,6 +60,8 @@
             this.balanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.supplierDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnClearText = new System.Windows.Forms.Button();
+            this.cboxUOMSetup = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUDIntBalSetup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUDPriceSetup)).BeginInit();
@@ -83,13 +84,13 @@
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.numUDIntBalSetup, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.txtboxUOMSetup, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.numUDPriceSetup, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtboxMedicineSetup, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtboxMedicineID, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 153);
+            this.tableLayoutPanel1.Controls.Add(this.cboxUOMSetup, 1, 3);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 183);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
@@ -167,6 +168,7 @@
             // 
             // numUDIntBalSetup
             // 
+            this.numUDIntBalSetup.DecimalPlaces = 2;
             this.numUDIntBalSetup.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.numUDIntBalSetup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numUDIntBalSetup.Location = new System.Drawing.Point(147, 169);
@@ -191,15 +193,6 @@
             this.label5.Text = "Units of Measure:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // txtboxUOMSetup
-            // 
-            this.txtboxUOMSetup.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtboxUOMSetup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxUOMSetup.Location = new System.Drawing.Point(147, 130);
-            this.txtboxUOMSetup.Name = "txtboxUOMSetup";
-            this.txtboxUOMSetup.Size = new System.Drawing.Size(220, 23);
-            this.txtboxUOMSetup.TabIndex = 3;
-            // 
             // label4
             // 
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -213,6 +206,7 @@
             // 
             // numUDPriceSetup
             // 
+            this.numUDPriceSetup.DecimalPlaces = 2;
             this.numUDPriceSetup.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.numUDPriceSetup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numUDPriceSetup.Location = new System.Drawing.Point(147, 91);
@@ -249,6 +243,7 @@
             // txtboxMedicineID
             // 
             this.txtboxMedicineID.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtboxMedicineID.Enabled = false;
             this.txtboxMedicineID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtboxMedicineID.Location = new System.Drawing.Point(147, 13);
             this.txtboxMedicineID.Name = "txtboxMedicineID";
@@ -292,7 +287,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 68);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(303, 79);
+            this.label2.Size = new System.Drawing.Size(370, 54);
             this.label2.TabIndex = 0;
             this.label2.Text = "Input Information:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -304,7 +299,7 @@
             this.btnSubmitSetup.FlatAppearance.BorderSize = 3;
             this.btnSubmitSetup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmitSetup.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmitSetup.Location = new System.Drawing.Point(18, 432);
+            this.btnSubmitSetup.Location = new System.Drawing.Point(18, 462);
             this.btnSubmitSetup.Name = "btnSubmitSetup";
             this.btnSubmitSetup.Size = new System.Drawing.Size(361, 48);
             this.btnSubmitSetup.TabIndex = 7;
@@ -323,12 +318,13 @@
             this.btnUpdateSetup.FlatAppearance.BorderSize = 3;
             this.btnUpdateSetup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateSetup.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateSetup.Location = new System.Drawing.Point(18, 486);
+            this.btnUpdateSetup.Location = new System.Drawing.Point(18, 516);
             this.btnUpdateSetup.Name = "btnUpdateSetup";
             this.btnUpdateSetup.Size = new System.Drawing.Size(361, 48);
             this.btnUpdateSetup.TabIndex = 8;
             this.btnUpdateSetup.Text = "Update";
             this.btnUpdateSetup.UseVisualStyleBackColor = false;
+            this.btnUpdateSetup.Click += new System.EventHandler(this.btnUpdateSetup_Click);
             // 
             // btnDeleteSetup
             // 
@@ -337,12 +333,13 @@
             this.btnDeleteSetup.FlatAppearance.BorderSize = 3;
             this.btnDeleteSetup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteSetup.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteSetup.Location = new System.Drawing.Point(18, 540);
+            this.btnDeleteSetup.Location = new System.Drawing.Point(18, 570);
             this.btnDeleteSetup.Name = "btnDeleteSetup";
             this.btnDeleteSetup.Size = new System.Drawing.Size(361, 48);
             this.btnDeleteSetup.TabIndex = 9;
             this.btnDeleteSetup.Text = "Delete";
             this.btnDeleteSetup.UseVisualStyleBackColor = false;
+            this.btnDeleteSetup.Click += new System.EventHandler(this.btnDeleteSetup_Click);
             // 
             // dgvMedicine
             // 
@@ -368,6 +365,7 @@
             this.dgvMedicine.ReadOnly = true;
             this.dgvMedicine.Size = new System.Drawing.Size(631, 629);
             this.dgvMedicine.TabIndex = 13;
+            this.dgvMedicine.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMedicine_CellClick);
             // 
             // medicineIDDataGridViewTextBoxColumn
             // 
@@ -424,12 +422,43 @@
             this.itemCodeDataGridViewTextBoxColumn.Name = "itemCodeDataGridViewTextBoxColumn";
             this.itemCodeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // btnClearText
+            // 
+            this.btnClearText.Location = new System.Drawing.Point(288, 154);
+            this.btnClearText.Name = "btnClearText";
+            this.btnClearText.Size = new System.Drawing.Size(91, 23);
+            this.btnClearText.TabIndex = 14;
+            this.btnClearText.Text = "Clear Fields";
+            this.btnClearText.UseVisualStyleBackColor = true;
+            this.btnClearText.Click += new System.EventHandler(this.btnClearText_Click);
+            // 
+            // cboxUOMSetup
+            // 
+            this.cboxUOMSetup.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboxUOMSetup.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboxUOMSetup.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.cboxUOMSetup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxUOMSetup.FormattingEnabled = true;
+            this.cboxUOMSetup.Items.AddRange(new object[] {
+            "btls.",
+            "bxs.",
+            "nebule",
+            "pcs.",
+            "units",
+            "cycle",
+            "vial"});
+            this.cboxUOMSetup.Location = new System.Drawing.Point(147, 132);
+            this.cboxUOMSetup.Name = "cboxUOMSetup";
+            this.cboxUOMSetup.Size = new System.Drawing.Size(220, 24);
+            this.cboxUOMSetup.TabIndex = 3;
+            // 
             // formSetup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGreen;
             this.ClientSize = new System.Drawing.Size(1031, 722);
+            this.Controls.Add(this.btnClearText);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvMedicine);
             this.Controls.Add(this.btnDeleteSetup);
@@ -467,7 +496,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtboxMedicineSetup;
         private System.Windows.Forms.NumericUpDown numUDPriceSetup;
-        private System.Windows.Forms.TextBox txtboxUOMSetup;
         private System.Windows.Forms.NumericUpDown numUDIntBalSetup;
         private System.Windows.Forms.TextBox txtboxSupplierSetup;
         private System.Windows.Forms.TextBox txtboxItemCodeSetup;
@@ -488,5 +516,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn balanceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn supplierDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemCodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnClearText;
+        private System.Windows.Forms.ComboBox cboxUOMSetup;
     }
 }

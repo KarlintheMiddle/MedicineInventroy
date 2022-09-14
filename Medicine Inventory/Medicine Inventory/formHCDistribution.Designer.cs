@@ -37,20 +37,20 @@
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.numDist = new System.Windows.Forms.NumericUpDown();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.comboBoxMedicineDist = new System.Windows.Forms.ComboBox();
-            this.dtpDateDist = new System.Windows.Forms.DateTimePicker();
-            this.comboBoxHealthCenterDist = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.numDist = new System.Windows.Forms.NumericUpDown();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
+            this.comboBoxHealthCenterDist = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.dtpDateDist = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numDist)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -120,7 +120,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(726, 150);
             this.dataGridView1.TabIndex = 5;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // tableLayoutPanel2
             // 
@@ -140,6 +139,53 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(726, 83);
             this.tableLayoutPanel2.TabIndex = 7;
             // 
+            // comboBoxMedicineDist
+            // 
+            this.comboBoxMedicineDist.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxMedicineDist.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.comboBoxMedicineDist.Dock = System.Windows.Forms.DockStyle.Top;
+            this.comboBoxMedicineDist.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxMedicineDist.FormattingEnabled = true;
+            this.comboBoxMedicineDist.Location = new System.Drawing.Point(3, 31);
+            this.comboBoxMedicineDist.Name = "comboBoxMedicineDist";
+            this.comboBoxMedicineDist.Size = new System.Drawing.Size(510, 28);
+            this.comboBoxMedicineDist.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(510, 28);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Medicine:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(519, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(204, 28);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Distributed:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // numDist
+            // 
+            this.numDist.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numDist.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numDist.Location = new System.Drawing.Point(519, 31);
+            this.numDist.Name = "numDist";
+            this.numDist.Size = new System.Drawing.Size(204, 26);
+            this.numDist.TabIndex = 6;
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -158,93 +204,18 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(726, 83);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
-            // numDist
+            // label3
             // 
-            this.numDist.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numDist.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numDist.Location = new System.Drawing.Point(519, 31);
-            this.numDist.Name = "numDist";
-            this.numDist.Size = new System.Drawing.Size(204, 26);
-            this.numDist.TabIndex = 6;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(519, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(204, 28);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Distributed:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(3, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(510, 28);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Medicine:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // comboBoxMedicineDist
-            // 
-            this.comboBoxMedicineDist.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBoxMedicineDist.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxMedicineDist.Dock = System.Windows.Forms.DockStyle.Top;
-            this.comboBoxMedicineDist.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxMedicineDist.FormattingEnabled = true;
-            this.comboBoxMedicineDist.Items.AddRange(new object[] {
-            "Almanza 1",
-            "Balagtas",
-            "Basa",
-            "Bernabe",
-            "BF Carnival",
-            "Caa-A",
-            "Caa-B",
-            "Caa-C",
-            "Caa-D",
-            "Daniel Fajardo",
-            "Elias Aldana",
-            "Gatchalian",
-            "Golden Acres",
-            "Ilaya",
-            "Manuyo 1",
-            "Pamplona 1",
-            "Pamplona 2",
-            "Pamplona 3",
-            "Pilar",
-            "Pugad Lawin",
-            "Pulang Lupa 1",
-            "Pulang Lupa 2",
-            "Talon 1",
-            "Talon 2",
-            "Talon 3",
-            "Talon 4",
-            "Talon 5",
-            "TS Cruz",
-            "Urbanville",
-            "Zapote"});
-            this.comboBoxMedicineDist.Location = new System.Drawing.Point(3, 31);
-            this.comboBoxMedicineDist.Name = "comboBoxMedicineDist";
-            this.comboBoxMedicineDist.Size = new System.Drawing.Size(510, 28);
-            this.comboBoxMedicineDist.TabIndex = 4;
-            // 
-            // dtpDateDist
-            // 
-            this.dtpDateDist.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dtpDateDist.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDateDist.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDateDist.Location = new System.Drawing.Point(366, 36);
-            this.dtpDateDist.Name = "dtpDateDist";
-            this.dtpDateDist.Size = new System.Drawing.Size(357, 26);
-            this.dtpDateDist.TabIndex = 4;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(3, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(357, 33);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Health Center:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // comboBoxHealthCenterDist
             // 
@@ -289,19 +260,6 @@
             this.comboBoxHealthCenterDist.Size = new System.Drawing.Size(357, 28);
             this.comboBoxHealthCenterDist.TabIndex = 3;
             // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(3, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(357, 33);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Health Center:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
@@ -314,6 +272,16 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Date: ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // dtpDateDist
+            // 
+            this.dtpDateDist.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dtpDateDist.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDateDist.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDateDist.Location = new System.Drawing.Point(366, 36);
+            this.dtpDateDist.Name = "dtpDateDist";
+            this.dtpDateDist.Size = new System.Drawing.Size(357, 26);
+            this.dtpDateDist.TabIndex = 4;
             // 
             // formHCDistribution
             // 
@@ -331,8 +299,8 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numDist)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
