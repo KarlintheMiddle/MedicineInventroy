@@ -31,3 +31,23 @@ D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine I
 D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\bin\Debug\Medicine Inventory.exe.config
 D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\bin\Debug\Medicine Inventory.exe
 D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\bin\Debug\Medicine Inventory.pdb
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine_Inventory.DistModal.resources
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\bin\Debug\PdfSharp.Charting.dll
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\bin\Debug\PdfSharp.dll
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\bin\Debug\System.Buffers.dll
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\bin\Debug\System.Drawing.Common.dll
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\bin\Debug\System.Memory.dll
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\bin\Debug\System.Numerics.Vectors.dll
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\bin\Debug\System.Text.Encoding.CodePages.dll
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\bin\Debug\PdfSharp.xml
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\bin\Debug\PdfSharp.Charting.xml
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\bin\Debug\System.Buffers.xml
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\bin\Debug\System.Drawing.Common.xml
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\bin\Debug\System.Memory.xml
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\bin\Debug\System.Numerics.Vectors.xml
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\bin\Debug\System.Text.Encoding.CodePages.xml
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\bin\Debug\de\PdfSharp.resources.dll
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\bin\Debug\de\PdfSharp.Charting.resources.dll
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine Inventory.csproj.CopyComplete
