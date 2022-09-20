@@ -34,8 +34,8 @@ namespace Medicine_Inventory
 
         private void formHCDistribution_Load(object sender, EventArgs e)
         {
-            cn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\'D:\\Users\\PC 4\\Documents\\MEDICINE INVENTORY\\Project\\Medicine Inventory\\Medicine Inventory\\MedicineInventory.mdf\';Integrated Security=True");
-           
+            cn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\MedicineInventory.mdf;Integrated Security=True");
+
             populateComboBox();
             
 
@@ -201,8 +201,7 @@ namespace Medicine_Inventory
         private void btnPrint_Click(object sender, EventArgs e)
         {
             cn.Open();
-            //SelectFilePath();
-            GetSumDistributed("Amlodipine 5mg Tab. 100's");
+            SelectFilePath();
             cn.Close(); 
         }
 
@@ -363,7 +362,7 @@ namespace Medicine_Inventory
             {
 
 
-                string insertQuery = "SELECT SUM (Distributed) FROM DistributionTransaction WHERE Medicine = @medicine AND Date = @date AND [Health Center] = @hc";
+                string insertQuery = "SELECT sum(Distribute) FROM DistributionTransaction WHERE Medicine = @medicine AND Date = @date AND [Health Center] = @hc";
                 
                 using (cmd = new SqlCommand(insertQuery, cn))
                 {
@@ -373,8 +372,12 @@ namespace Medicine_Inventory
                     cmd.Parameters.Add("hc", SqlDbType.NVarChar).Value = comboBoxHealthCenterDist.Text;
 
                     object result = cmd.ExecuteScalar();
+                    if (!(result is DBNull))
+                    {
+                        return Convert.ToDecimal(result);
+                        
+                    }
                     
-                    return (decimal)result;
                     
                 }
             }

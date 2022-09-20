@@ -28,7 +28,7 @@ namespace Medicine_Inventory
 
         private void formSetup_Load(object sender, EventArgs e)
         {
-            cn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\'D:\\Users\\PC 4\\Documents\\MEDICINE INVENTORY\\Project\\Medicine Inventory\\Medicine Inventory\\MedicineInventory.mdf\';Integrated Security=True");
+            cn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\MedicineInventory.mdf;Integrated Security=True");
             cn.Open();
             getMedicineRecord();
             txtboxMedicineSetup.Focus();

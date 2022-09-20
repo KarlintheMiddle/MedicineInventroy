@@ -38,8 +38,8 @@ namespace Medicine_Inventory
 
         private void DistModal_Load(object sender, EventArgs e)
         {
-            cn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\'D:\\Users\\PC 4\\Documents\\MEDICINE INVENTORY\\Project\\Medicine Inventory\\Medicine Inventory\\MedicineInventory.mdf\';Integrated Security=True");
-            
+            cn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\MedicineInventory.mdf;Integrated Security=True");
+
 
             populateDataGrid();
         }
@@ -91,7 +91,7 @@ namespace Medicine_Inventory
                 exDate = dgvDistTrans.Rows[e.RowIndex].Cells["expirydateCol"].Value.ToString();
 
                 cn.Open();
-                string insertQuery = "DELETE from DistributionTransaction where Date = @date AND [Health Center] = @hc AND Medicine = @medicine AND Price = @price AND [Expiry Date] = @exdate AND [Distributed] = @distributed";
+                string insertQuery = "DELETE from DistributionTransaction where Date = @date AND [Health Center] = @hc AND Medicine = @medicine AND Price = @price AND [Expiry Date] = @exdate AND [Distribute] = @distributed";
                 try
                 {
                     using (SqlCommand cmd = new SqlCommand(insertQuery, cn))
