@@ -363,7 +363,7 @@ namespace Medicine_Inventory
             {
 
 
-                string insertQuery = "SELECT SUM (Distributed) FROM DistributionTransaction WHERE Medicine = @medicine AND Date = @date AND [Health Center] = @hc";
+                string insertQuery = "SELECT SUM(Distributed) FROM DistributionTransaction WHERE Medicine = @medicine AND Date = @date AND [Health Center] = @hc";
                 
                 using (cmd = new SqlCommand(insertQuery, cn))
                 {
