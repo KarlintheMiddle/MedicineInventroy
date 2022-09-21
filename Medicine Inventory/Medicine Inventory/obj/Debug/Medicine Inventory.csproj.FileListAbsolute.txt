@@ -89,3 +89,41 @@ D:\Projects\Work projects\VStudio Projects\Medicine\Medicine Inventory\Medicine 
 D:\Projects\Work projects\VStudio Projects\Medicine\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine Inventory.csproj.CopyComplete
 D:\Projects\Work projects\VStudio Projects\Medicine\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine Inventory.exe
 D:\Projects\Work projects\VStudio Projects\Medicine\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine Inventory.pdb
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\bin\Debug\MedicineInventory.mdf
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\bin\Debug\MedicineInventory_log.ldf
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\bin\Debug\Medicine Inventory.exe.config
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\bin\Debug\Medicine Inventory.exe
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\bin\Debug\Medicine Inventory.pdb
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\bin\Debug\PdfSharp.Charting.dll
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\bin\Debug\PdfSharp.dll
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\bin\Debug\System.Buffers.dll
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\bin\Debug\System.Drawing.Common.dll
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\bin\Debug\System.Memory.dll
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\bin\Debug\System.Numerics.Vectors.dll
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\bin\Debug\System.Text.Encoding.CodePages.dll
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\bin\Debug\PdfSharp.xml
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\bin\Debug\PdfSharp.Charting.xml
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\bin\Debug\System.Buffers.xml
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\bin\Debug\System.Drawing.Common.xml
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\bin\Debug\System.Memory.xml
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\bin\Debug\System.Numerics.Vectors.xml
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\bin\Debug\System.Text.Encoding.CodePages.xml
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\bin\Debug\de\PdfSharp.resources.dll
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\bin\Debug\de\PdfSharp.Charting.resources.dll
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine Inventory.csproj.AssemblyReference.cache
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine Inventory.csproj.SuggestedBindingRedirects.cache
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine_Inventory.DistModal.resources
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine_Inventory.Form1.resources
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine_Inventory.formHCDistribution.resources
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine_Inventory.formHCUtilization.resources
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine_Inventory.formOthers.resources
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine_Inventory.formPurchaseOrder.resources
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine_Inventory.formSetup.resources
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine_Inventory.Properties.Resources.resources
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine Inventory.csproj.GenerateResource.cache
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine Inventory.csproj.CoreCompileInputs.cache
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine Inventory.csproj.CopyComplete
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine Inventory.exe
+D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine Inventory.pdb

@@ -22,6 +22,7 @@ namespace Medicine_Inventory
         {
             pnlReportSubMenu.Visible = false;
             pnlTransactionSubMenu.Visible = false;
+            panelSetupSubMenu.Visible = false;  
         }
 
         private void hideSubMenu()
@@ -32,7 +33,12 @@ namespace Medicine_Inventory
             }
             if (pnlReportSubMenu.Visible == true)
             {
-                pnlReportSubMenu.Visible=false;
+                pnlReportSubMenu.Visible = false;
+            }
+            if (panelSetupSubMenu.Visible == true)
+            {
+                panelSetupSubMenu.Visible = false;
+
             }
         }
 
@@ -110,6 +116,7 @@ namespace Medicine_Inventory
         #region Report SubMenu
         private void btnReports_Click(object sender, EventArgs e)
         {
+
             showSubMenu(pnlReportSubMenu);
         }
 
@@ -137,8 +144,21 @@ namespace Medicine_Inventory
         #region Setup
         private void btnSetupMenu_Click(object sender, EventArgs e)
         {
-            openChildForm(new formSetup());
+            showSubMenu(panelSetupSubMenu);
         }
+
+        private void btnSetupHealthCenter_Click(object sender, EventArgs e)
+        {
+            openChildForm(new formSetup());
+            hideSubMenu();
+        }
+
+        private void btnSetupHealthOffice_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
         #endregion
+
     }
 }

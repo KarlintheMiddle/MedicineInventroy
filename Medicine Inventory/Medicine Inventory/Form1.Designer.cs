@@ -43,14 +43,19 @@
             this.btnTransaction = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlChildForm = new System.Windows.Forms.Panel();
+            this.panelSetupSubMenu = new System.Windows.Forms.Panel();
+            this.btnSetupHealthOffice = new System.Windows.Forms.Button();
+            this.btnSetupHealthCenter = new System.Windows.Forms.Button();
             this.pnlSideMenuBar.SuspendLayout();
             this.pnlReportSubMenu.SuspendLayout();
             this.pnlTransactionSubMenu.SuspendLayout();
+            this.panelSetupSubMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlSideMenuBar
             // 
             this.pnlSideMenuBar.BackColor = System.Drawing.Color.DarkGreen;
+            this.pnlSideMenuBar.Controls.Add(this.panelSetupSubMenu);
             this.pnlSideMenuBar.Controls.Add(this.btnSetupMenu);
             this.pnlSideMenuBar.Controls.Add(this.pnlReportSubMenu);
             this.pnlSideMenuBar.Controls.Add(this.btnReports);
@@ -274,6 +279,51 @@
             this.pnlChildForm.Size = new System.Drawing.Size(900, 761);
             this.pnlChildForm.TabIndex = 1;
             // 
+            // panelSetupSubMenu
+            // 
+            this.panelSetupSubMenu.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.panelSetupSubMenu.Controls.Add(this.btnSetupHealthOffice);
+            this.panelSetupSubMenu.Controls.Add(this.btnSetupHealthCenter);
+            this.panelSetupSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSetupSubMenu.Location = new System.Drawing.Point(0, 709);
+            this.panelSetupSubMenu.Name = "panelSetupSubMenu";
+            this.panelSetupSubMenu.Size = new System.Drawing.Size(284, 201);
+            this.panelSetupSubMenu.TabIndex = 6;
+            // 
+            // btnSetupHealthOffice
+            // 
+            this.btnSetupHealthOffice.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSetupHealthOffice.FlatAppearance.BorderSize = 0;
+            this.btnSetupHealthOffice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetupHealthOffice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetupHealthOffice.ForeColor = System.Drawing.Color.Snow;
+            this.btnSetupHealthOffice.Location = new System.Drawing.Point(0, 46);
+            this.btnSetupHealthOffice.Name = "btnSetupHealthOffice";
+            this.btnSetupHealthOffice.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnSetupHealthOffice.Size = new System.Drawing.Size(284, 46);
+            this.btnSetupHealthOffice.TabIndex = 5;
+            this.btnSetupHealthOffice.Text = "Health Office Initial Balance";
+            this.btnSetupHealthOffice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSetupHealthOffice.UseVisualStyleBackColor = true;
+            this.btnSetupHealthOffice.Click += new System.EventHandler(this.btnSetupHealthOffice_Click);
+            // 
+            // btnSetupHealthCenter
+            // 
+            this.btnSetupHealthCenter.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSetupHealthCenter.FlatAppearance.BorderSize = 0;
+            this.btnSetupHealthCenter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetupHealthCenter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetupHealthCenter.ForeColor = System.Drawing.Color.Snow;
+            this.btnSetupHealthCenter.Location = new System.Drawing.Point(0, 0);
+            this.btnSetupHealthCenter.Name = "btnSetupHealthCenter";
+            this.btnSetupHealthCenter.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnSetupHealthCenter.Size = new System.Drawing.Size(284, 46);
+            this.btnSetupHealthCenter.TabIndex = 4;
+            this.btnSetupHealthCenter.Text = "Health Center Initial Balance";
+            this.btnSetupHealthCenter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSetupHealthCenter.UseVisualStyleBackColor = true;
+            this.btnSetupHealthCenter.Click += new System.EventHandler(this.btnSetupHealthCenter_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -286,6 +336,7 @@
             this.pnlSideMenuBar.ResumeLayout(false);
             this.pnlReportSubMenu.ResumeLayout(false);
             this.pnlTransactionSubMenu.ResumeLayout(false);
+            this.panelSetupSubMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -307,6 +358,9 @@
         private System.Windows.Forms.Button btnReports;
         private System.Windows.Forms.Panel pnlChildForm;
         private System.Windows.Forms.Button btnSetupMenu;
+        private System.Windows.Forms.Panel panelSetupSubMenu;
+        private System.Windows.Forms.Button btnSetupHealthOffice;
+        private System.Windows.Forms.Button btnSetupHealthCenter;
     }
 }
 

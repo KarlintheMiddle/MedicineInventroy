@@ -44,6 +44,8 @@ namespace Medicine_Inventory
             populateDataGrid();
         }
 
+        #region Methods and Classes
+
         private void populateDataGrid()
         {
             string insertQuery = "SELECT * FROM DistributionTransaction WHERE [Health Center] = @hc";
@@ -71,6 +73,9 @@ namespace Medicine_Inventory
             }
         }
 
+        #endregion
+
+        #region Controls
         private void button1_Click(object sender, EventArgs e)
         {
             populateDataGrid();
@@ -126,5 +131,7 @@ namespace Medicine_Inventory
                 cn.Close();
             }
         }
+
+        #endregion
     }
 }

@@ -12,6 +12,7 @@ using System.Data.SqlClient;
 using System.Data.Sql;
 using PdfSharp.Pdf;
 using PdfSharp.Drawing;
+using System.IO;
 
 namespace Medicine_Inventory
 {
@@ -60,9 +61,9 @@ namespace Medicine_Inventory
             dataGridView1.Columns[5].FillWeight = 40;
         }
 
-
-        #region Controls Functions
-
+        #region Methods and Classes
+        
+        //Populate the combobox with Medicines
         private void populateComboBox()
         {
             cn.Open();
@@ -72,16 +73,17 @@ namespace Medicine_Inventory
 
             while (reader.Read())
             {
-                comboBoxMedicineDist.Items.Add(reader[0].ToString());   
-               
+                comboBoxMedicineDist.Items.Add(reader[0].ToString());
+
             }
             cn.Close();
         }
 
+        //Populate the combobox with Prices
         private void populateNumPrice()
         {
             cn.Open();
-            
+
             string priceSelect = "Select Price from Medicine WHERE Medicine = @medicine";
             cmd = new SqlCommand(priceSelect, cn);
             cmd.Parameters.Add("@medicine", SqlDbType.NVarChar).Value = comboBoxMedicineDist.Text;
@@ -96,6 +98,110 @@ namespace Medicine_Inventory
             cn.Close();
         }
 
+        //Auto focus when selecting Numbers
+        private void numSelector(NumericUpDown num)
+        {
+            num.Select(0, num.Text.Length);
+        }
+
+        //Generate Datatable for DataGridView
+        private void addDataTable()
+        {
+
+            DataRow _Transaction = dt.NewRow();
+            _Transaction["Date"] = dtpDateDist.Text;
+            _Transaction["Health Center"] = comboBoxHealthCenterDist.Text;
+            _Transaction["Medicine"] = comboBoxMedicineDist.Text;
+            _Transaction["Distributed"] = numDist.Value;
+            _Transaction["Price"] = numPrice.Text;
+            _Transaction["Expiry Date"] = dtpExpiryDate.Text;
+
+            dt.Rows.Add(_Transaction);
+
+        }
+
+        //Submits the input data on the SQL Database
+        private void submitToDatabase(string tableName, DataTable dataTable)
+        {
+            cn.Open();
+            try
+            {
+
+                SqlBulkCopy bulkCopy = new SqlBulkCopy(cn);
+                bulkCopy.DestinationTableName = tableName;
+                bulkCopy.WriteToServer(dataTable);
+
+                MessageBox.Show("Added to database");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
+        }
+
+        //Array List Class for all the Medicine and their UOM
+        public class BarangayInventory
+        {
+            public string Medicine { get; set; }
+            public string UOM { get; set; }
+        }
+
+        //Open Select Folder Dialog box
+        private void SelectFilePath()
+        {
+            string selectedPath;
+            FolderBrowserDialog dialog = new FolderBrowserDialog();
+            dialog.Description = "Custom Description";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                selectedPath = dialog.SelectedPath;
+                generateReport(selectedPath);
+
+
+
+            }
+
+        }
+
+        //Add all the Distributed per Medicine, Barangay and Date
+        private decimal GetSumDistributed(string medicineName)
+        {
+            try
+            {
+
+
+                string insertQuery = "SELECT sum(Distribute) FROM DistributionTransaction WHERE Medicine = @medicine AND Date = @date AND [Health Center] = @hc";
+
+                using (cmd = new SqlCommand(insertQuery, cn))
+                {
+
+                    cmd.Parameters.Add("@medicine", SqlDbType.NVarChar).Value = medicineName;
+                    cmd.Parameters.Add("@date", SqlDbType.Date).Value = dtpDateDist.Text;
+                    cmd.Parameters.Add("hc", SqlDbType.NVarChar).Value = comboBoxHealthCenterDist.Text;
+
+                    object result = cmd.ExecuteScalar();
+                    if (!(result is DBNull))
+                    {
+                        return Convert.ToDecimal(result);
+
+                    }
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+            }
+
+            return 0;
+        }
+        #endregion
+
+        
+        #region Controls Functions
         private void numPrice_Enter(object sender, EventArgs e)
         {
             numPrice.Items.Clear();
@@ -103,10 +209,6 @@ namespace Medicine_Inventory
         }
 
 
-        private void numSelector(NumericUpDown num)
-        {
-            num.Select(0, num.Text.Length);
-        }
 
         private void numDist_Enter(Object sender, EventArgs eventArgs)
         {
@@ -114,7 +216,7 @@ namespace Medicine_Inventory
         }
 
         
-        #endregion
+       
 
         private void btnAddToList_Click(object sender, EventArgs e)
         {
@@ -145,21 +247,6 @@ namespace Medicine_Inventory
             }
         }
 
-        private void addDataTable()
-        {
-
-            DataRow _Transaction = dt.NewRow();
-            _Transaction["Date"] = dtpDateDist.Text;
-            _Transaction["Health Center"] = comboBoxHealthCenterDist.Text;
-            _Transaction["Medicine"] = comboBoxMedicineDist.Text;
-            _Transaction["Distributed"] = numDist.Value;
-            _Transaction["Price"] = numPrice.Text;
-            _Transaction["Expiry Date"] = dtpExpiryDate.Text;
-
-            dt.Rows.Add(_Transaction);
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             dt.Clear();
@@ -169,25 +256,6 @@ namespace Medicine_Inventory
         {
             string dbName = "DistributionTransaction";
             submitToDatabase(dbName, dt);
-        }
-
-        private void submitToDatabase(string tableName, DataTable dataTable)
-        {
-            cn.Open();
-            try
-            {
-
-                SqlBulkCopy bulkCopy = new SqlBulkCopy(cn);
-                bulkCopy.DestinationTableName = tableName;
-                bulkCopy.WriteToServer(dataTable);
-                
-                MessageBox.Show("Added to database");
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex);
-            }
         }
 
         private void btnShowTrans_Click(object sender, EventArgs e)
@@ -202,8 +270,14 @@ namespace Medicine_Inventory
         {
             cn.Open();
             SelectFilePath();
-            cn.Close(); 
+            cn.Close();
         }
+
+
+
+        #endregion
+
+
 
 
         #region PDFSharp
@@ -321,73 +395,24 @@ namespace Medicine_Inventory
                 //gfx.DrawLine(new XPen(XColor.FromKnownColor(XKnownColor.Black)), new XPoint(900, 85), new XPoint(900, 550));//Remarks
 
                 document.Save(filePath + "\\MedicineReport-" + dtpDateDist.Value.ToString("MMM-yyyy") + "-" + comboBoxHealthCenterDist.Text + ".pdf");
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex);
-            }
-
-        }
-
-        #endregion
-
-
-        public class BarangayInventory
-        {
-            public string Medicine { get; set; }
-            public string UOM { get; set; }
-        }
-
-        private void SelectFilePath()
-        {
-            string selectedPath;
-            FolderBrowserDialog dialog = new FolderBrowserDialog();
-            dialog.Description = "Custom Description";
-
-            if (dialog.ShowDialog() == DialogResult.OK)
-            {
-                selectedPath = dialog.SelectedPath;
-                generateReport(selectedPath);
-
-                
-                
-            }
-            
-        }
-
-        private decimal GetSumDistributed( string medicineName)
-        {
-            try
-            {
-
-
-                string insertQuery = "SELECT sum(Distribute) FROM DistributionTransaction WHERE Medicine = @medicine AND Date = @date AND [Health Center] = @hc";
-                
-                using (cmd = new SqlCommand(insertQuery, cn))
+                string directory = Path.GetDirectoryName(filePath + "\\MedicineReport-" + dtpDateDist.Value.ToString("MMM-yyyy") + "-" + comboBoxHealthCenterDist.Text + ".pdf");
+                if (MessageBox.Show("The file saved at -> " + filePath, "Open Directory?", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                    
-                    cmd.Parameters.Add("@medicine", SqlDbType.NVarChar).Value = medicineName;
-                    cmd.Parameters.Add("@date", SqlDbType.Date).Value = dtpDateDist.Text;
-                    cmd.Parameters.Add("hc", SqlDbType.NVarChar).Value = comboBoxHealthCenterDist.Text;
-
-                    object result = cmd.ExecuteScalar();
-                    if (!(result is DBNull))
-                    {
-                        return Convert.ToDecimal(result);
-                        
-                    }
-                    
-                    
+                    System.Diagnostics.Process.Start(directory);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex);
             }
-            
-            return 0;
+
         }
-        
+
+
+
+
+        #endregion
+
+       
     }
 }
