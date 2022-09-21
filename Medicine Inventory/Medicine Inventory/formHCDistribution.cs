@@ -256,6 +256,7 @@ namespace Medicine_Inventory
         {
             string dbName = "DistributionTransaction";
             submitToDatabase(dbName, dt);
+            cn.Close();
         }
 
         private void btnShowTrans_Click(object sender, EventArgs e)
