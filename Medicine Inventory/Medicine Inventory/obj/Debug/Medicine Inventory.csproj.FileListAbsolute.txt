@@ -127,3 +127,4 @@ D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine In
 D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine Inventory.csproj.CopyComplete
 D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine Inventory.exe
 D:\Users\PC 4\Documents\MEDICINE INVENTORY\Project\MedicineInventory\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine Inventory.pdb
+D:\Projects\Work projects\VStudio Projects\Medicine\Medicine Inventory\Medicine Inventory\obj\Debug\Medicine_Inventory.formHCInitialBalance.resources

@@ -43,6 +43,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtboxMedicineSetup = new System.Windows.Forms.TextBox();
             this.txtboxMedicineID = new System.Windows.Forms.TextBox();
+            this.cboxUOMSetup = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.medicineBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -61,7 +62,6 @@
             this.supplierDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnClearText = new System.Windows.Forms.Button();
-            this.cboxUOMSetup = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUDIntBalSetup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUDPriceSetup)).BeginInit();
@@ -252,13 +252,33 @@
             this.txtboxMedicineID.TabIndex = 10;
             this.txtboxMedicineID.TabStop = false;
             // 
+            // cboxUOMSetup
+            // 
+            this.cboxUOMSetup.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboxUOMSetup.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboxUOMSetup.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.cboxUOMSetup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxUOMSetup.FormattingEnabled = true;
+            this.cboxUOMSetup.Items.AddRange(new object[] {
+            "btls.",
+            "bxs.",
+            "nebule",
+            "pcs.",
+            "units",
+            "cycle",
+            "vial"});
+            this.cboxUOMSetup.Location = new System.Drawing.Point(147, 129);
+            this.cboxUOMSetup.Name = "cboxUOMSetup";
+            this.cboxUOMSetup.Size = new System.Drawing.Size(220, 24);
+            this.cboxUOMSetup.TabIndex = 3;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1031, 68);
+            this.panel1.Size = new System.Drawing.Size(884, 68);
             this.panel1.TabIndex = 1;
             // 
             // label1
@@ -267,7 +287,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1031, 68);
+            this.label1.Size = new System.Drawing.Size(884, 68);
             this.label1.TabIndex = 0;
             this.label1.Text = "Setup Medicine Inventory";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -363,7 +383,7 @@
             this.dgvMedicine.Location = new System.Drawing.Point(388, 81);
             this.dgvMedicine.Name = "dgvMedicine";
             this.dgvMedicine.ReadOnly = true;
-            this.dgvMedicine.Size = new System.Drawing.Size(631, 629);
+            this.dgvMedicine.Size = new System.Drawing.Size(484, 629);
             this.dgvMedicine.TabIndex = 13;
             this.dgvMedicine.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMedicine_CellClick);
             // 
@@ -432,32 +452,12 @@
             this.btnClearText.UseVisualStyleBackColor = true;
             this.btnClearText.Click += new System.EventHandler(this.btnClearText_Click);
             // 
-            // cboxUOMSetup
-            // 
-            this.cboxUOMSetup.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cboxUOMSetup.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cboxUOMSetup.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.cboxUOMSetup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboxUOMSetup.FormattingEnabled = true;
-            this.cboxUOMSetup.Items.AddRange(new object[] {
-            "btls.",
-            "bxs.",
-            "nebule",
-            "pcs.",
-            "units",
-            "cycle",
-            "vial"});
-            this.cboxUOMSetup.Location = new System.Drawing.Point(147, 132);
-            this.cboxUOMSetup.Name = "cboxUOMSetup";
-            this.cboxUOMSetup.Size = new System.Drawing.Size(220, 24);
-            this.cboxUOMSetup.TabIndex = 3;
-            // 
             // formSetup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGreen;
-            this.ClientSize = new System.Drawing.Size(1031, 722);
+            this.ClientSize = new System.Drawing.Size(884, 722);
             this.Controls.Add(this.btnClearText);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvMedicine);
