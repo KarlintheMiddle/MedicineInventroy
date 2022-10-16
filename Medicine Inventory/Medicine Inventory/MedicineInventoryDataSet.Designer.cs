@@ -24,13 +24,15 @@ namespace Medicine_Inventory {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class MedicineInventoryDataSet : global::System.Data.DataSet {
         
-        private MedicineDataTable tableMedicine;
+        private Medicine_BalanceDataTable tableMedicine_Balance;
         
         private DistributionTransactionDataTable tableDistributionTransaction;
         
         private OthersTransactionDataTable tableOthersTransaction;
         
         private PurchaseTransactionDataTable tablePurchaseTransaction;
+        
+        private Health_Center_BalanceDataTable tableHealth_Center_Balance;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -60,8 +62,8 @@ namespace Medicine_Inventory {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Medicine"] != null)) {
-                    base.Tables.Add(new MedicineDataTable(ds.Tables["Medicine"]));
+                if ((ds.Tables["Medicine Balance"] != null)) {
+                    base.Tables.Add(new Medicine_BalanceDataTable(ds.Tables["Medicine Balance"]));
                 }
                 if ((ds.Tables["DistributionTransaction"] != null)) {
                     base.Tables.Add(new DistributionTransactionDataTable(ds.Tables["DistributionTransaction"]));
@@ -71,6 +73,9 @@ namespace Medicine_Inventory {
                 }
                 if ((ds.Tables["PurchaseTransaction"] != null)) {
                     base.Tables.Add(new PurchaseTransactionDataTable(ds.Tables["PurchaseTransaction"]));
+                }
+                if ((ds.Tables["Health Center Balance"] != null)) {
+                    base.Tables.Add(new Health_Center_BalanceDataTable(ds.Tables["Health Center Balance"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -94,9 +99,9 @@ namespace Medicine_Inventory {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public MedicineDataTable Medicine {
+        public Medicine_BalanceDataTable Medicine_Balance {
             get {
-                return this.tableMedicine;
+                return this.tableMedicine_Balance;
             }
         }
         
@@ -127,6 +132,16 @@ namespace Medicine_Inventory {
         public PurchaseTransactionDataTable PurchaseTransaction {
             get {
                 return this.tablePurchaseTransaction;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public Health_Center_BalanceDataTable Health_Center_Balance {
+            get {
+                return this.tableHealth_Center_Balance;
             }
         }
         
@@ -197,8 +212,8 @@ namespace Medicine_Inventory {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Medicine"] != null)) {
-                    base.Tables.Add(new MedicineDataTable(ds.Tables["Medicine"]));
+                if ((ds.Tables["Medicine Balance"] != null)) {
+                    base.Tables.Add(new Medicine_BalanceDataTable(ds.Tables["Medicine Balance"]));
                 }
                 if ((ds.Tables["DistributionTransaction"] != null)) {
                     base.Tables.Add(new DistributionTransactionDataTable(ds.Tables["DistributionTransaction"]));
@@ -208,6 +223,9 @@ namespace Medicine_Inventory {
                 }
                 if ((ds.Tables["PurchaseTransaction"] != null)) {
                     base.Tables.Add(new PurchaseTransactionDataTable(ds.Tables["PurchaseTransaction"]));
+                }
+                if ((ds.Tables["Health Center Balance"] != null)) {
+                    base.Tables.Add(new Health_Center_BalanceDataTable(ds.Tables["Health Center Balance"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -242,10 +260,10 @@ namespace Medicine_Inventory {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableMedicine = ((MedicineDataTable)(base.Tables["Medicine"]));
+            this.tableMedicine_Balance = ((Medicine_BalanceDataTable)(base.Tables["Medicine Balance"]));
             if ((initTable == true)) {
-                if ((this.tableMedicine != null)) {
-                    this.tableMedicine.InitVars();
+                if ((this.tableMedicine_Balance != null)) {
+                    this.tableMedicine_Balance.InitVars();
                 }
             }
             this.tableDistributionTransaction = ((DistributionTransactionDataTable)(base.Tables["DistributionTransaction"]));
@@ -266,6 +284,12 @@ namespace Medicine_Inventory {
                     this.tablePurchaseTransaction.InitVars();
                 }
             }
+            this.tableHealth_Center_Balance = ((Health_Center_BalanceDataTable)(base.Tables["Health Center Balance"]));
+            if ((initTable == true)) {
+                if ((this.tableHealth_Center_Balance != null)) {
+                    this.tableHealth_Center_Balance.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -276,19 +300,21 @@ namespace Medicine_Inventory {
             this.Namespace = "http://tempuri.org/MedicineInventoryDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableMedicine = new MedicineDataTable();
-            base.Tables.Add(this.tableMedicine);
+            this.tableMedicine_Balance = new Medicine_BalanceDataTable();
+            base.Tables.Add(this.tableMedicine_Balance);
             this.tableDistributionTransaction = new DistributionTransactionDataTable();
             base.Tables.Add(this.tableDistributionTransaction);
             this.tableOthersTransaction = new OthersTransactionDataTable();
             base.Tables.Add(this.tableOthersTransaction);
             this.tablePurchaseTransaction = new PurchaseTransactionDataTable();
             base.Tables.Add(this.tablePurchaseTransaction);
+            this.tableHealth_Center_Balance = new Health_Center_BalanceDataTable();
+            base.Tables.Add(this.tableHealth_Center_Balance);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeMedicine() {
+        private bool ShouldSerializeMedicine_Balance() {
             return false;
         }
         
@@ -307,6 +333,12 @@ namespace Medicine_Inventory {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private bool ShouldSerializePurchaseTransaction() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeHealth_Center_Balance() {
             return false;
         }
         
@@ -366,7 +398,7 @@ namespace Medicine_Inventory {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void MedicineRowChangeEventHandler(object sender, MedicineRowChangeEvent e);
+        public delegate void Medicine_BalanceRowChangeEventHandler(object sender, Medicine_BalanceRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void DistributionTransactionRowChangeEventHandler(object sender, DistributionTransactionRowChangeEvent e);
@@ -377,12 +409,15 @@ namespace Medicine_Inventory {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void PurchaseTransactionRowChangeEventHandler(object sender, PurchaseTransactionRowChangeEvent e);
         
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void Health_Center_BalanceRowChangeEventHandler(object sender, Health_Center_BalanceRowChangeEvent e);
+        
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class MedicineDataTable : global::System.Data.TypedTableBase<MedicineRow> {
+        public partial class Medicine_BalanceDataTable : global::System.Data.TypedTableBase<Medicine_BalanceRow> {
             
             private global::System.Data.DataColumn columnMedicineID;
             
@@ -400,8 +435,8 @@ namespace Medicine_Inventory {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public MedicineDataTable() {
-                this.TableName = "Medicine";
+            public Medicine_BalanceDataTable() {
+                this.TableName = "Medicine Balance";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -409,7 +444,7 @@ namespace Medicine_Inventory {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal MedicineDataTable(global::System.Data.DataTable table) {
+            internal Medicine_BalanceDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -426,7 +461,7 @@ namespace Medicine_Inventory {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected MedicineDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected Medicine_BalanceDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -498,34 +533,34 @@ namespace Medicine_Inventory {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public MedicineRow this[int index] {
+            public Medicine_BalanceRow this[int index] {
                 get {
-                    return ((MedicineRow)(this.Rows[index]));
+                    return ((Medicine_BalanceRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event MedicineRowChangeEventHandler MedicineRowChanging;
+            public event Medicine_BalanceRowChangeEventHandler Medicine_BalanceRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event MedicineRowChangeEventHandler MedicineRowChanged;
+            public event Medicine_BalanceRowChangeEventHandler Medicine_BalanceRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event MedicineRowChangeEventHandler MedicineRowDeleting;
+            public event Medicine_BalanceRowChangeEventHandler Medicine_BalanceRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event MedicineRowChangeEventHandler MedicineRowDeleted;
+            public event Medicine_BalanceRowChangeEventHandler Medicine_BalanceRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddMedicineRow(MedicineRow row) {
+            public void AddMedicine_BalanceRow(Medicine_BalanceRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public MedicineRow AddMedicineRow(string Medicine, decimal Price, string UOM, double Balance, string Supplier, string ItemCode) {
-                MedicineRow rowMedicineRow = ((MedicineRow)(this.NewRow()));
+            public Medicine_BalanceRow AddMedicine_BalanceRow(string Medicine, decimal Price, string UOM, double Balance, string Supplier, string ItemCode) {
+                Medicine_BalanceRow rowMedicine_BalanceRow = ((Medicine_BalanceRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Medicine,
@@ -534,22 +569,22 @@ namespace Medicine_Inventory {
                         Balance,
                         Supplier,
                         ItemCode};
-                rowMedicineRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowMedicineRow);
-                return rowMedicineRow;
+                rowMedicine_BalanceRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowMedicine_BalanceRow);
+                return rowMedicine_BalanceRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public MedicineRow FindByMedicineID(int MedicineID) {
-                return ((MedicineRow)(this.Rows.Find(new object[] {
+            public Medicine_BalanceRow FindByMedicineID(int MedicineID) {
+                return ((Medicine_BalanceRow)(this.Rows.Find(new object[] {
                             MedicineID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                MedicineDataTable cln = ((MedicineDataTable)(base.Clone()));
+                Medicine_BalanceDataTable cln = ((Medicine_BalanceDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -557,7 +592,7 @@ namespace Medicine_Inventory {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new MedicineDataTable();
+                return new Medicine_BalanceDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -606,28 +641,28 @@ namespace Medicine_Inventory {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public MedicineRow NewMedicineRow() {
-                return ((MedicineRow)(this.NewRow()));
+            public Medicine_BalanceRow NewMedicine_BalanceRow() {
+                return ((Medicine_BalanceRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new MedicineRow(builder);
+                return new Medicine_BalanceRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(MedicineRow);
+                return typeof(Medicine_BalanceRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.MedicineRowChanged != null)) {
-                    this.MedicineRowChanged(this, new MedicineRowChangeEvent(((MedicineRow)(e.Row)), e.Action));
+                if ((this.Medicine_BalanceRowChanged != null)) {
+                    this.Medicine_BalanceRowChanged(this, new Medicine_BalanceRowChangeEvent(((Medicine_BalanceRow)(e.Row)), e.Action));
                 }
             }
             
@@ -635,8 +670,8 @@ namespace Medicine_Inventory {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.MedicineRowChanging != null)) {
-                    this.MedicineRowChanging(this, new MedicineRowChangeEvent(((MedicineRow)(e.Row)), e.Action));
+                if ((this.Medicine_BalanceRowChanging != null)) {
+                    this.Medicine_BalanceRowChanging(this, new Medicine_BalanceRowChangeEvent(((Medicine_BalanceRow)(e.Row)), e.Action));
                 }
             }
             
@@ -644,8 +679,8 @@ namespace Medicine_Inventory {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.MedicineRowDeleted != null)) {
-                    this.MedicineRowDeleted(this, new MedicineRowChangeEvent(((MedicineRow)(e.Row)), e.Action));
+                if ((this.Medicine_BalanceRowDeleted != null)) {
+                    this.Medicine_BalanceRowDeleted(this, new Medicine_BalanceRowChangeEvent(((Medicine_BalanceRow)(e.Row)), e.Action));
                 }
             }
             
@@ -653,14 +688,14 @@ namespace Medicine_Inventory {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.MedicineRowDeleting != null)) {
-                    this.MedicineRowDeleting(this, new MedicineRowChangeEvent(((MedicineRow)(e.Row)), e.Action));
+                if ((this.Medicine_BalanceRowDeleting != null)) {
+                    this.Medicine_BalanceRowDeleting(this, new Medicine_BalanceRowChangeEvent(((Medicine_BalanceRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveMedicineRow(MedicineRow row) {
+            public void RemoveMedicine_BalanceRow(Medicine_BalanceRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -687,7 +722,7 @@ namespace Medicine_Inventory {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "MedicineDataTable";
+                attribute2.FixedValue = "Medicine_BalanceDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1791,27 +1826,321 @@ namespace Medicine_Inventory {
         }
         
         /// <summary>
-        ///Represents strongly named DataRow class.
+        ///Represents the strongly named DataTable class.
         ///</summary>
-        public partial class MedicineRow : global::System.Data.DataRow {
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Health_Center_BalanceDataTable : global::System.Data.TypedTableBase<Health_Center_BalanceRow> {
             
-            private MedicineDataTable tableMedicine;
+            private global::System.Data.DataColumn columnHealthCenter;
+            
+            private global::System.Data.DataColumn columnMedicine;
+            
+            private global::System.Data.DataColumn columnInitialBalance;
+            
+            private global::System.Data.DataColumn columnExpiryDate;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal MedicineRow(global::System.Data.DataRowBuilder rb) : 
+            public Health_Center_BalanceDataTable() {
+                this.TableName = "Health Center Balance";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal Health_Center_BalanceDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected Health_Center_BalanceDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn HealthCenterColumn {
+                get {
+                    return this.columnHealthCenter;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn MedicineColumn {
+                get {
+                    return this.columnMedicine;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn InitialBalanceColumn {
+                get {
+                    return this.columnInitialBalance;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ExpiryDateColumn {
+                get {
+                    return this.columnExpiryDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Health_Center_BalanceRow this[int index] {
+                get {
+                    return ((Health_Center_BalanceRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Health_Center_BalanceRowChangeEventHandler Health_Center_BalanceRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Health_Center_BalanceRowChangeEventHandler Health_Center_BalanceRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Health_Center_BalanceRowChangeEventHandler Health_Center_BalanceRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Health_Center_BalanceRowChangeEventHandler Health_Center_BalanceRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddHealth_Center_BalanceRow(Health_Center_BalanceRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Health_Center_BalanceRow AddHealth_Center_BalanceRow(string HealthCenter, string Medicine, decimal InitialBalance, System.DateTime ExpiryDate) {
+                Health_Center_BalanceRow rowHealth_Center_BalanceRow = ((Health_Center_BalanceRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        HealthCenter,
+                        Medicine,
+                        InitialBalance,
+                        ExpiryDate};
+                rowHealth_Center_BalanceRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowHealth_Center_BalanceRow);
+                return rowHealth_Center_BalanceRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                Health_Center_BalanceDataTable cln = ((Health_Center_BalanceDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Health_Center_BalanceDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnHealthCenter = base.Columns["HealthCenter"];
+                this.columnMedicine = base.Columns["Medicine"];
+                this.columnInitialBalance = base.Columns["InitialBalance"];
+                this.columnExpiryDate = base.Columns["ExpiryDate"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnHealthCenter = new global::System.Data.DataColumn("HealthCenter", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHealthCenter);
+                this.columnMedicine = new global::System.Data.DataColumn("Medicine", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMedicine);
+                this.columnInitialBalance = new global::System.Data.DataColumn("InitialBalance", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnInitialBalance);
+                this.columnExpiryDate = new global::System.Data.DataColumn("ExpiryDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpiryDate);
+                this.columnHealthCenter.AllowDBNull = false;
+                this.columnHealthCenter.MaxLength = 100;
+                this.columnMedicine.AllowDBNull = false;
+                this.columnMedicine.MaxLength = 100;
+                this.columnInitialBalance.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Health_Center_BalanceRow NewHealth_Center_BalanceRow() {
+                return ((Health_Center_BalanceRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Health_Center_BalanceRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(Health_Center_BalanceRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Health_Center_BalanceRowChanged != null)) {
+                    this.Health_Center_BalanceRowChanged(this, new Health_Center_BalanceRowChangeEvent(((Health_Center_BalanceRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Health_Center_BalanceRowChanging != null)) {
+                    this.Health_Center_BalanceRowChanging(this, new Health_Center_BalanceRowChangeEvent(((Health_Center_BalanceRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Health_Center_BalanceRowDeleted != null)) {
+                    this.Health_Center_BalanceRowDeleted(this, new Health_Center_BalanceRowChangeEvent(((Health_Center_BalanceRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Health_Center_BalanceRowDeleting != null)) {
+                    this.Health_Center_BalanceRowDeleting(this, new Health_Center_BalanceRowChangeEvent(((Health_Center_BalanceRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveHealth_Center_BalanceRow(Health_Center_BalanceRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                MedicineInventoryDataSet ds = new MedicineInventoryDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Health_Center_BalanceDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Medicine_BalanceRow : global::System.Data.DataRow {
+            
+            private Medicine_BalanceDataTable tableMedicine_Balance;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal Medicine_BalanceRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableMedicine = ((MedicineDataTable)(this.Table));
+                this.tableMedicine_Balance = ((Medicine_BalanceDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int MedicineID {
                 get {
-                    return ((int)(this[this.tableMedicine.MedicineIDColumn]));
+                    return ((int)(this[this.tableMedicine_Balance.MedicineIDColumn]));
                 }
                 set {
-                    this[this.tableMedicine.MedicineIDColumn] = value;
+                    this[this.tableMedicine_Balance.MedicineIDColumn] = value;
                 }
             }
             
@@ -1819,10 +2148,10 @@ namespace Medicine_Inventory {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string Medicine {
                 get {
-                    return ((string)(this[this.tableMedicine.MedicineColumn]));
+                    return ((string)(this[this.tableMedicine_Balance.MedicineColumn]));
                 }
                 set {
-                    this[this.tableMedicine.MedicineColumn] = value;
+                    this[this.tableMedicine_Balance.MedicineColumn] = value;
                 }
             }
             
@@ -1830,10 +2159,10 @@ namespace Medicine_Inventory {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public decimal Price {
                 get {
-                    return ((decimal)(this[this.tableMedicine.PriceColumn]));
+                    return ((decimal)(this[this.tableMedicine_Balance.PriceColumn]));
                 }
                 set {
-                    this[this.tableMedicine.PriceColumn] = value;
+                    this[this.tableMedicine_Balance.PriceColumn] = value;
                 }
             }
             
@@ -1841,10 +2170,10 @@ namespace Medicine_Inventory {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string UOM {
                 get {
-                    return ((string)(this[this.tableMedicine.UOMColumn]));
+                    return ((string)(this[this.tableMedicine_Balance.UOMColumn]));
                 }
                 set {
-                    this[this.tableMedicine.UOMColumn] = value;
+                    this[this.tableMedicine_Balance.UOMColumn] = value;
                 }
             }
             
@@ -1853,14 +2182,14 @@ namespace Medicine_Inventory {
             public double Balance {
                 get {
                     try {
-                        return ((double)(this[this.tableMedicine.BalanceColumn]));
+                        return ((double)(this[this.tableMedicine_Balance.BalanceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Balance\' in table \'Medicine\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Balance\' in table \'Medicine Balance\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableMedicine.BalanceColumn] = value;
+                    this[this.tableMedicine_Balance.BalanceColumn] = value;
                 }
             }
             
@@ -1869,14 +2198,14 @@ namespace Medicine_Inventory {
             public string Supplier {
                 get {
                     try {
-                        return ((string)(this[this.tableMedicine.SupplierColumn]));
+                        return ((string)(this[this.tableMedicine_Balance.SupplierColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Supplier\' in table \'Medicine\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Supplier\' in table \'Medicine Balance\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableMedicine.SupplierColumn] = value;
+                    this[this.tableMedicine_Balance.SupplierColumn] = value;
                 }
             }
             
@@ -1885,51 +2214,51 @@ namespace Medicine_Inventory {
             public string ItemCode {
                 get {
                     try {
-                        return ((string)(this[this.tableMedicine.ItemCodeColumn]));
+                        return ((string)(this[this.tableMedicine_Balance.ItemCodeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ItemCode\' in table \'Medicine\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ItemCode\' in table \'Medicine Balance\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableMedicine.ItemCodeColumn] = value;
+                    this[this.tableMedicine_Balance.ItemCodeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsBalanceNull() {
-                return this.IsNull(this.tableMedicine.BalanceColumn);
+                return this.IsNull(this.tableMedicine_Balance.BalanceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetBalanceNull() {
-                this[this.tableMedicine.BalanceColumn] = global::System.Convert.DBNull;
+                this[this.tableMedicine_Balance.BalanceColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsSupplierNull() {
-                return this.IsNull(this.tableMedicine.SupplierColumn);
+                return this.IsNull(this.tableMedicine_Balance.SupplierColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetSupplierNull() {
-                this[this.tableMedicine.SupplierColumn] = global::System.Convert.DBNull;
+                this[this.tableMedicine_Balance.SupplierColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsItemCodeNull() {
-                return this.IsNull(this.tableMedicine.ItemCodeColumn);
+                return this.IsNull(this.tableMedicine_Balance.ItemCodeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetItemCodeNull() {
-                this[this.tableMedicine.ItemCodeColumn] = global::System.Convert.DBNull;
+                this[this.tableMedicine_Balance.ItemCodeColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2289,25 +2618,101 @@ namespace Medicine_Inventory {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Health_Center_BalanceRow : global::System.Data.DataRow {
+            
+            private Health_Center_BalanceDataTable tableHealth_Center_Balance;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal Health_Center_BalanceRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableHealth_Center_Balance = ((Health_Center_BalanceDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string HealthCenter {
+                get {
+                    return ((string)(this[this.tableHealth_Center_Balance.HealthCenterColumn]));
+                }
+                set {
+                    this[this.tableHealth_Center_Balance.HealthCenterColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Medicine {
+                get {
+                    return ((string)(this[this.tableHealth_Center_Balance.MedicineColumn]));
+                }
+                set {
+                    this[this.tableHealth_Center_Balance.MedicineColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public decimal InitialBalance {
+                get {
+                    return ((decimal)(this[this.tableHealth_Center_Balance.InitialBalanceColumn]));
+                }
+                set {
+                    this[this.tableHealth_Center_Balance.InitialBalanceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime ExpiryDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableHealth_Center_Balance.ExpiryDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ExpiryDate\' in table \'Health Center Balance\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableHealth_Center_Balance.ExpiryDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsExpiryDateNull() {
+                return this.IsNull(this.tableHealth_Center_Balance.ExpiryDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetExpiryDateNull() {
+                this[this.tableHealth_Center_Balance.ExpiryDateColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class MedicineRowChangeEvent : global::System.EventArgs {
+        public class Medicine_BalanceRowChangeEvent : global::System.EventArgs {
             
-            private MedicineRow eventRow;
+            private Medicine_BalanceRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public MedicineRowChangeEvent(MedicineRow row, global::System.Data.DataRowAction action) {
+            public Medicine_BalanceRowChangeEvent(Medicine_BalanceRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public MedicineRow Row {
+            public Medicine_BalanceRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -2423,6 +2828,40 @@ namespace Medicine_Inventory {
                 }
             }
         }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class Health_Center_BalanceRowChangeEvent : global::System.EventArgs {
+            
+            private Health_Center_BalanceRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Health_Center_BalanceRowChangeEvent(Health_Center_BalanceRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Health_Center_BalanceRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
     }
 }
 namespace Medicine_Inventory.MedicineInventoryDataSetTableAdapters {
@@ -2437,7 +2876,7 @@ namespace Medicine_Inventory.MedicineInventoryDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class MedicineTableAdapter : global::System.ComponentModel.Component {
+    public partial class Medicine_BalanceTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -2451,7 +2890,7 @@ namespace Medicine_Inventory.MedicineInventoryDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public MedicineTableAdapter() {
+        public Medicine_BalanceTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -2548,7 +2987,7 @@ namespace Medicine_Inventory.MedicineInventoryDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Medicine";
+            tableMapping.DataSetTable = "Medicine Balance";
             tableMapping.ColumnMappings.Add("MedicineID", "MedicineID");
             tableMapping.ColumnMappings.Add("Medicine", "Medicine");
             tableMapping.ColumnMappings.Add("Price", "Price");
@@ -2629,7 +3068,7 @@ SELECT MedicineID, Medicine, Price, UOM, Balance, Supplier, ItemCode FROM Medici
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(MedicineInventoryDataSet.MedicineDataTable dataTable) {
+        public virtual int Fill(MedicineInventoryDataSet.Medicine_BalanceDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -2642,9 +3081,9 @@ SELECT MedicineID, Medicine, Price, UOM, Balance, Supplier, ItemCode FROM Medici
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual MedicineInventoryDataSet.MedicineDataTable GetData() {
+        public virtual MedicineInventoryDataSet.Medicine_BalanceDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            MedicineInventoryDataSet.MedicineDataTable dataTable = new MedicineInventoryDataSet.MedicineDataTable();
+            MedicineInventoryDataSet.Medicine_BalanceDataTable dataTable = new MedicineInventoryDataSet.Medicine_BalanceDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -2652,7 +3091,7 @@ SELECT MedicineID, Medicine, Price, UOM, Balance, Supplier, ItemCode FROM Medici
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(MedicineInventoryDataSet.MedicineDataTable dataTable) {
+        public virtual int Update(MedicineInventoryDataSet.Medicine_BalanceDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -2660,7 +3099,7 @@ SELECT MedicineID, Medicine, Price, UOM, Balance, Supplier, ItemCode FROM Medici
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(MedicineInventoryDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Medicine");
+            return this.Adapter.Update(dataSet, "Medicine Balance");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4172,6 +4611,256 @@ SELECT Id, DateOfPurchase, Medicine, UOM, Price, Amount, ExpiryDate, Supplier FR
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class Health_Center_BalanceTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public Health_Center_BalanceTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Health Center Balance";
+            tableMapping.ColumnMappings.Add("HealthCenter", "HealthCenter");
+            tableMapping.ColumnMappings.Add("Medicine", "Medicine");
+            tableMapping.ColumnMappings.Add("InitialBalance", "InitialBalance");
+            tableMapping.ColumnMappings.Add("ExpiryDate", "ExpiryDate");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[HCInitialBalance] ([HealthCenter], [Medicine], [InitialBalance" +
+                "], [ExpiryDate]) VALUES (@HealthCenter, @Medicine, @InitialBalance, @ExpiryDate)" +
+                "";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HealthCenter", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HealthCenter", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Medicine", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Medicine", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@InitialBalance", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "InitialBalance", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ExpiryDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ExpiryDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Medicine_Inventory.Properties.Settings.Default.MedicineInventoryConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT HealthCenter, Medicine, InitialBalance, ExpiryDate FROM dbo.HCInitialBalan" +
+                "ce";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(MedicineInventoryDataSet.Health_Center_BalanceDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual MedicineInventoryDataSet.Health_Center_BalanceDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            MedicineInventoryDataSet.Health_Center_BalanceDataTable dataTable = new MedicineInventoryDataSet.Health_Center_BalanceDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(MedicineInventoryDataSet.Health_Center_BalanceDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(MedicineInventoryDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "Health Center Balance");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string HealthCenter, string Medicine, decimal InitialBalance, global::System.Nullable<global::System.DateTime> ExpiryDate) {
+            if ((HealthCenter == null)) {
+                throw new global::System.ArgumentNullException("HealthCenter");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(HealthCenter));
+            }
+            if ((Medicine == null)) {
+                throw new global::System.ArgumentNullException("Medicine");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Medicine));
+            }
+            this.Adapter.InsertCommand.Parameters[2].Value = ((decimal)(InitialBalance));
+            if ((ExpiryDate.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(ExpiryDate.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4183,13 +4872,15 @@ SELECT Id, DateOfPurchase, Medicine, UOM, Price, Amount, ExpiryDate, Supplier FR
         
         private UpdateOrderOption _updateOrder;
         
-        private MedicineTableAdapter _medicineTableAdapter;
+        private Medicine_BalanceTableAdapter _medicine_BalanceTableAdapter;
         
         private DistributionTransactionTableAdapter _distributionTransactionTableAdapter;
         
         private OthersTransactionTableAdapter _othersTransactionTableAdapter;
         
         private PurchaseTransactionTableAdapter _purchaseTransactionTableAdapter;
+        
+        private Health_Center_BalanceTableAdapter _health_Center_BalanceTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -4211,12 +4902,12 @@ SELECT Id, DateOfPurchase, Medicine, UOM, Price, Amount, ExpiryDate, Supplier FR
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public MedicineTableAdapter MedicineTableAdapter {
+        public Medicine_BalanceTableAdapter Medicine_BalanceTableAdapter {
             get {
-                return this._medicineTableAdapter;
+                return this._medicine_BalanceTableAdapter;
             }
             set {
-                this._medicineTableAdapter = value;
+                this._medicine_BalanceTableAdapter = value;
             }
         }
         
@@ -4264,6 +4955,20 @@ SELECT Id, DateOfPurchase, Medicine, UOM, Price, Amount, ExpiryDate, Supplier FR
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public Health_Center_BalanceTableAdapter Health_Center_BalanceTableAdapter {
+            get {
+                return this._health_Center_BalanceTableAdapter;
+            }
+            set {
+                this._health_Center_BalanceTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -4281,9 +4986,9 @@ SELECT Id, DateOfPurchase, Medicine, UOM, Price, Amount, ExpiryDate, Supplier FR
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._medicineTableAdapter != null) 
-                            && (this._medicineTableAdapter.Connection != null))) {
-                    return this._medicineTableAdapter.Connection;
+                if (((this._medicine_BalanceTableAdapter != null) 
+                            && (this._medicine_BalanceTableAdapter.Connection != null))) {
+                    return this._medicine_BalanceTableAdapter.Connection;
                 }
                 if (((this._distributionTransactionTableAdapter != null) 
                             && (this._distributionTransactionTableAdapter.Connection != null))) {
@@ -4296,6 +5001,10 @@ SELECT Id, DateOfPurchase, Medicine, UOM, Price, Amount, ExpiryDate, Supplier FR
                 if (((this._purchaseTransactionTableAdapter != null) 
                             && (this._purchaseTransactionTableAdapter.Connection != null))) {
                     return this._purchaseTransactionTableAdapter.Connection;
+                }
+                if (((this._health_Center_BalanceTableAdapter != null) 
+                            && (this._health_Center_BalanceTableAdapter.Connection != null))) {
+                    return this._health_Center_BalanceTableAdapter.Connection;
                 }
                 return null;
             }
@@ -4310,7 +5019,7 @@ SELECT Id, DateOfPurchase, Medicine, UOM, Price, Amount, ExpiryDate, Supplier FR
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._medicineTableAdapter != null)) {
+                if ((this._medicine_BalanceTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._distributionTransactionTableAdapter != null)) {
@@ -4320,6 +5029,9 @@ SELECT Id, DateOfPurchase, Medicine, UOM, Price, Amount, ExpiryDate, Supplier FR
                     count = (count + 1);
                 }
                 if ((this._purchaseTransactionTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._health_Center_BalanceTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -4333,12 +5045,12 @@ SELECT Id, DateOfPurchase, Medicine, UOM, Price, Amount, ExpiryDate, Supplier FR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateUpdatedRows(MedicineInventoryDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._medicineTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Medicine.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._medicine_BalanceTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Medicine_Balance.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._medicineTableAdapter.Update(updatedRows));
+                    result = (result + this._medicine_BalanceTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -4369,6 +5081,15 @@ SELECT Id, DateOfPurchase, Medicine, UOM, Price, Amount, ExpiryDate, Supplier FR
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._health_Center_BalanceTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Health_Center_Balance.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._health_Center_BalanceTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -4379,11 +5100,11 @@ SELECT Id, DateOfPurchase, Medicine, UOM, Price, Amount, ExpiryDate, Supplier FR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateInsertedRows(MedicineInventoryDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._medicineTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Medicine.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._medicine_BalanceTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Medicine_Balance.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._medicineTableAdapter.Update(addedRows));
+                    result = (result + this._medicine_BalanceTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -4411,6 +5132,14 @@ SELECT Id, DateOfPurchase, Medicine, UOM, Price, Amount, ExpiryDate, Supplier FR
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._health_Center_BalanceTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Health_Center_Balance.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._health_Center_BalanceTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -4421,6 +5150,14 @@ SELECT Id, DateOfPurchase, Medicine, UOM, Price, Amount, ExpiryDate, Supplier FR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateDeletedRows(MedicineInventoryDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._health_Center_BalanceTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Health_Center_Balance.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._health_Center_BalanceTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._purchaseTransactionTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.PurchaseTransaction.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -4445,11 +5182,11 @@ SELECT Id, DateOfPurchase, Medicine, UOM, Price, Amount, ExpiryDate, Supplier FR
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._medicineTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Medicine.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._medicine_BalanceTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Medicine_Balance.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._medicineTableAdapter.Update(deletedRows));
+                    result = (result + this._medicine_BalanceTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -4492,8 +5229,8 @@ SELECT Id, DateOfPurchase, Medicine, UOM, Price, Amount, ExpiryDate, Supplier FR
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._medicineTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._medicineTableAdapter.Connection) == false))) {
+            if (((this._medicine_BalanceTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._medicine_BalanceTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -4509,6 +5246,11 @@ SELECT Id, DateOfPurchase, Medicine, UOM, Price, Amount, ExpiryDate, Supplier FR
             }
             if (((this._purchaseTransactionTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._purchaseTransactionTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
+            if (((this._health_Center_BalanceTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._health_Center_BalanceTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -4544,13 +5286,13 @@ SELECT Id, DateOfPurchase, Medicine, UOM, Price, Amount, ExpiryDate, Supplier FR
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._medicineTableAdapter != null)) {
-                    revertConnections.Add(this._medicineTableAdapter, this._medicineTableAdapter.Connection);
-                    this._medicineTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._medicineTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._medicineTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._medicineTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._medicineTableAdapter.Adapter);
+                if ((this._medicine_BalanceTableAdapter != null)) {
+                    revertConnections.Add(this._medicine_BalanceTableAdapter, this._medicine_BalanceTableAdapter.Connection);
+                    this._medicine_BalanceTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._medicine_BalanceTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._medicine_BalanceTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._medicine_BalanceTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._medicine_BalanceTableAdapter.Adapter);
                     }
                 }
                 if ((this._distributionTransactionTableAdapter != null)) {
@@ -4578,6 +5320,15 @@ SELECT Id, DateOfPurchase, Medicine, UOM, Price, Amount, ExpiryDate, Supplier FR
                     if (this._purchaseTransactionTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._purchaseTransactionTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._purchaseTransactionTableAdapter.Adapter);
+                    }
+                }
+                if ((this._health_Center_BalanceTableAdapter != null)) {
+                    revertConnections.Add(this._health_Center_BalanceTableAdapter, this._health_Center_BalanceTableAdapter.Connection);
+                    this._health_Center_BalanceTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._health_Center_BalanceTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._health_Center_BalanceTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._health_Center_BalanceTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._health_Center_BalanceTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -4638,9 +5389,9 @@ SELECT Id, DateOfPurchase, Medicine, UOM, Price, Amount, ExpiryDate, Supplier FR
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._medicineTableAdapter != null)) {
-                    this._medicineTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._medicineTableAdapter]));
-                    this._medicineTableAdapter.Transaction = null;
+                if ((this._medicine_BalanceTableAdapter != null)) {
+                    this._medicine_BalanceTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._medicine_BalanceTableAdapter]));
+                    this._medicine_BalanceTableAdapter.Transaction = null;
                 }
                 if ((this._distributionTransactionTableAdapter != null)) {
                     this._distributionTransactionTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._distributionTransactionTableAdapter]));
@@ -4653,6 +5404,10 @@ SELECT Id, DateOfPurchase, Medicine, UOM, Price, Amount, ExpiryDate, Supplier FR
                 if ((this._purchaseTransactionTableAdapter != null)) {
                     this._purchaseTransactionTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._purchaseTransactionTableAdapter]));
                     this._purchaseTransactionTableAdapter.Transaction = null;
+                }
+                if ((this._health_Center_BalanceTableAdapter != null)) {
+                    this._health_Center_BalanceTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._health_Center_BalanceTableAdapter]));
+                    this._health_Center_BalanceTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

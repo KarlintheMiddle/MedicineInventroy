@@ -149,12 +149,13 @@ namespace Medicine_Inventory
 
         private void btnSetupHealthCenter_Click(object sender, EventArgs e)
         {
-            openChildForm(new formSetup());
+            openChildForm(new formHCInitialBalance());
             hideSubMenu();
         }
 
         private void btnSetupHealthOffice_Click(object sender, EventArgs e)
         {
+            openChildForm(new formSetup());
             hideSubMenu();
         }
 
