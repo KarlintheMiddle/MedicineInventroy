@@ -28,17 +28,13 @@ namespace Medicine_Inventory {
         
         private OthersTransactionDataTable tableOthersTransaction;
         
-        private MedicineDataTable tableMedicine;
+        private HealthCenterDataTable tableHealthCenter;
         
-        private HOInitialBalanceDataTable tableHOInitialBalance;
+        private HCInitialBalanceDataTable tableHCInitialBalance;
         
         private global::System.Data.DataRelation _relationFK_OthersTransaction_PurchaseTransaction__PurchaseTransaction_;
         
-        private global::System.Data.DataRelation _relationFK_PurchaseTransaction_MedicineID_Medicine_;
-        
-        private global::System.Data.DataRelation _relationFK_OthersTransaction_Medicine__Medicine_;
-        
-        private global::System.Data.DataRelation _relationFK_HOInitialBalance_Medicine__Medicine_;
+        private global::System.Data.DataRelation _relationFK_HCInitialBalance_HealthCenter__HealthCenter_;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -74,11 +70,11 @@ namespace Medicine_Inventory {
                 if ((ds.Tables["OthersTransaction"] != null)) {
                     base.Tables.Add(new OthersTransactionDataTable(ds.Tables["OthersTransaction"]));
                 }
-                if ((ds.Tables["Medicine"] != null)) {
-                    base.Tables.Add(new MedicineDataTable(ds.Tables["Medicine"]));
+                if ((ds.Tables["HealthCenter"] != null)) {
+                    base.Tables.Add(new HealthCenterDataTable(ds.Tables["HealthCenter"]));
                 }
-                if ((ds.Tables["HOInitialBalance"] != null)) {
-                    base.Tables.Add(new HOInitialBalanceDataTable(ds.Tables["HOInitialBalance"]));
+                if ((ds.Tables["HCInitialBalance"] != null)) {
+                    base.Tables.Add(new HCInitialBalanceDataTable(ds.Tables["HCInitialBalance"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -122,9 +118,9 @@ namespace Medicine_Inventory {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public MedicineDataTable Medicine {
+        public HealthCenterDataTable HealthCenter {
             get {
-                return this.tableMedicine;
+                return this.tableHealthCenter;
             }
         }
         
@@ -132,9 +128,9 @@ namespace Medicine_Inventory {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public HOInitialBalanceDataTable HOInitialBalance {
+        public HCInitialBalanceDataTable HCInitialBalance {
             get {
-                return this.tableHOInitialBalance;
+                return this.tableHCInitialBalance;
             }
         }
         
@@ -211,11 +207,11 @@ namespace Medicine_Inventory {
                 if ((ds.Tables["OthersTransaction"] != null)) {
                     base.Tables.Add(new OthersTransactionDataTable(ds.Tables["OthersTransaction"]));
                 }
-                if ((ds.Tables["Medicine"] != null)) {
-                    base.Tables.Add(new MedicineDataTable(ds.Tables["Medicine"]));
+                if ((ds.Tables["HealthCenter"] != null)) {
+                    base.Tables.Add(new HealthCenterDataTable(ds.Tables["HealthCenter"]));
                 }
-                if ((ds.Tables["HOInitialBalance"] != null)) {
-                    base.Tables.Add(new HOInitialBalanceDataTable(ds.Tables["HOInitialBalance"]));
+                if ((ds.Tables["HCInitialBalance"] != null)) {
+                    base.Tables.Add(new HCInitialBalanceDataTable(ds.Tables["HCInitialBalance"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -262,22 +258,20 @@ namespace Medicine_Inventory {
                     this.tableOthersTransaction.InitVars();
                 }
             }
-            this.tableMedicine = ((MedicineDataTable)(base.Tables["Medicine"]));
+            this.tableHealthCenter = ((HealthCenterDataTable)(base.Tables["HealthCenter"]));
             if ((initTable == true)) {
-                if ((this.tableMedicine != null)) {
-                    this.tableMedicine.InitVars();
+                if ((this.tableHealthCenter != null)) {
+                    this.tableHealthCenter.InitVars();
                 }
             }
-            this.tableHOInitialBalance = ((HOInitialBalanceDataTable)(base.Tables["HOInitialBalance"]));
+            this.tableHCInitialBalance = ((HCInitialBalanceDataTable)(base.Tables["HCInitialBalance"]));
             if ((initTable == true)) {
-                if ((this.tableHOInitialBalance != null)) {
-                    this.tableHOInitialBalance.InitVars();
+                if ((this.tableHCInitialBalance != null)) {
+                    this.tableHCInitialBalance.InitVars();
                 }
             }
             this._relationFK_OthersTransaction_PurchaseTransaction__PurchaseTransaction_ = this.Relations["FK_OthersTransaction_PurchaseTransaction (PurchaseTransaction)"];
-            this._relationFK_PurchaseTransaction_MedicineID_Medicine_ = this.Relations["FK_PurchaseTransaction_MedicineID(Medicine)"];
-            this._relationFK_OthersTransaction_Medicine__Medicine_ = this.Relations["FK_OthersTransaction_Medicine (Medicine)"];
-            this._relationFK_HOInitialBalance_Medicine__Medicine_ = this.Relations["FK_HOInitialBalance_Medicine (Medicine)"];
+            this._relationFK_HCInitialBalance_HealthCenter__HealthCenter_ = this.Relations["FK_HCInitialBalance_HealthCenter (HealthCenter)"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -292,26 +286,18 @@ namespace Medicine_Inventory {
             base.Tables.Add(this.tablePurchaseTransaction);
             this.tableOthersTransaction = new OthersTransactionDataTable();
             base.Tables.Add(this.tableOthersTransaction);
-            this.tableMedicine = new MedicineDataTable();
-            base.Tables.Add(this.tableMedicine);
-            this.tableHOInitialBalance = new HOInitialBalanceDataTable();
-            base.Tables.Add(this.tableHOInitialBalance);
+            this.tableHealthCenter = new HealthCenterDataTable();
+            base.Tables.Add(this.tableHealthCenter);
+            this.tableHCInitialBalance = new HCInitialBalanceDataTable();
+            base.Tables.Add(this.tableHCInitialBalance);
             this._relationFK_OthersTransaction_PurchaseTransaction__PurchaseTransaction_ = new global::System.Data.DataRelation("FK_OthersTransaction_PurchaseTransaction (PurchaseTransaction)", new global::System.Data.DataColumn[] {
                         this.tablePurchaseTransaction.PurchaseIdColumn}, new global::System.Data.DataColumn[] {
                         this.tableOthersTransaction.PurchaseIDColumn}, false);
             this.Relations.Add(this._relationFK_OthersTransaction_PurchaseTransaction__PurchaseTransaction_);
-            this._relationFK_PurchaseTransaction_MedicineID_Medicine_ = new global::System.Data.DataRelation("FK_PurchaseTransaction_MedicineID(Medicine)", new global::System.Data.DataColumn[] {
-                        this.tableMedicine.MedicineIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tablePurchaseTransaction.MedicineIDColumn}, false);
-            this.Relations.Add(this._relationFK_PurchaseTransaction_MedicineID_Medicine_);
-            this._relationFK_OthersTransaction_Medicine__Medicine_ = new global::System.Data.DataRelation("FK_OthersTransaction_Medicine (Medicine)", new global::System.Data.DataColumn[] {
-                        this.tableMedicine.MedicineIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableOthersTransaction.MedicineIDColumn}, false);
-            this.Relations.Add(this._relationFK_OthersTransaction_Medicine__Medicine_);
-            this._relationFK_HOInitialBalance_Medicine__Medicine_ = new global::System.Data.DataRelation("FK_HOInitialBalance_Medicine (Medicine)", new global::System.Data.DataColumn[] {
-                        this.tableMedicine.MedicineIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableHOInitialBalance.MedicineIDColumn}, false);
-            this.Relations.Add(this._relationFK_HOInitialBalance_Medicine__Medicine_);
+            this._relationFK_HCInitialBalance_HealthCenter__HealthCenter_ = new global::System.Data.DataRelation("FK_HCInitialBalance_HealthCenter (HealthCenter)", new global::System.Data.DataColumn[] {
+                        this.tableHealthCenter.HCenterIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableHCInitialBalance.HCenterIDColumn}, false);
+            this.Relations.Add(this._relationFK_HCInitialBalance_HealthCenter__HealthCenter_);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -328,13 +314,13 @@ namespace Medicine_Inventory {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeMedicine() {
+        private bool ShouldSerializeHealthCenter() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeHOInitialBalance() {
+        private bool ShouldSerializeHCInitialBalance() {
             return false;
         }
         
@@ -400,10 +386,10 @@ namespace Medicine_Inventory {
         public delegate void OthersTransactionRowChangeEventHandler(object sender, OthersTransactionRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void MedicineRowChangeEventHandler(object sender, MedicineRowChangeEvent e);
+        public delegate void HealthCenterRowChangeEventHandler(object sender, HealthCenterRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void HOInitialBalanceRowChangeEventHandler(object sender, HOInitialBalanceRowChangeEvent e);
+        public delegate void HCInitialBalanceRowChangeEventHandler(object sender, HCInitialBalanceRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -572,11 +558,11 @@ namespace Medicine_Inventory {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PurchaseTransactionRow AddPurchaseTransactionRow(int PurchaseId, MedicineRow _parentMedicineRowByFK_PurchaseTransaction_MedicineID_Medicine_, System.DateTime DateOfPurchase, string Medicine, string UOM, decimal Price, double Amount, System.DateTime ExpiryDate, string Supplier) {
+            public PurchaseTransactionRow AddPurchaseTransactionRow(int PurchaseId, int MedicineID, System.DateTime DateOfPurchase, string Medicine, string UOM, decimal Price, double Amount, System.DateTime ExpiryDate, string Supplier) {
                 PurchaseTransactionRow rowPurchaseTransactionRow = ((PurchaseTransactionRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         PurchaseId,
-                        null,
+                        MedicineID,
                         DateOfPurchase,
                         Medicine,
                         UOM,
@@ -584,9 +570,6 @@ namespace Medicine_Inventory {
                         Amount,
                         ExpiryDate,
                         Supplier};
-                if ((_parentMedicineRowByFK_PurchaseTransaction_MedicineID_Medicine_ != null)) {
-                    columnValuesArray[1] = _parentMedicineRowByFK_PurchaseTransaction_MedicineID_Medicine_[0];
-                }
                 rowPurchaseTransactionRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPurchaseTransactionRow);
                 return rowPurchaseTransactionRow;
@@ -954,21 +937,18 @@ namespace Medicine_Inventory {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public OthersTransactionRow AddOthersTransactionRow(int OthersTransacID, System.DateTime Date, string Recipient, string Medicine, MedicineRow _parentMedicineRowByFK_OthersTransaction_Medicine__Medicine_, PurchaseTransactionRow _parentPurchaseTransactionRowByFK_OthersTransaction_PurchaseTransaction__PurchaseTransaction_, decimal Price, double Amount, System.DateTime ExpiryDate) {
+            public OthersTransactionRow AddOthersTransactionRow(int OthersTransacID, System.DateTime Date, string Recipient, string Medicine, int MedicineID, PurchaseTransactionRow _parentPurchaseTransactionRowByFK_OthersTransaction_PurchaseTransaction__PurchaseTransaction_, decimal Price, double Amount, System.DateTime ExpiryDate) {
                 OthersTransactionRow rowOthersTransactionRow = ((OthersTransactionRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         OthersTransacID,
                         Date,
                         Recipient,
                         Medicine,
-                        null,
+                        MedicineID,
                         null,
                         Price,
                         Amount,
                         ExpiryDate};
-                if ((_parentMedicineRowByFK_OthersTransaction_Medicine__Medicine_ != null)) {
-                    columnValuesArray[4] = _parentMedicineRowByFK_OthersTransaction_Medicine__Medicine_[0];
-                }
                 if ((_parentPurchaseTransactionRowByFK_OthersTransaction_PurchaseTransaction__PurchaseTransaction_ != null)) {
                     columnValuesArray[5] = _parentPurchaseTransactionRowByFK_OthersTransaction_PurchaseTransaction__PurchaseTransaction_[0];
                 }
@@ -1177,20 +1157,20 @@ namespace Medicine_Inventory {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class MedicineDataTable : global::System.Data.TypedTableBase<MedicineRow> {
+        public partial class HealthCenterDataTable : global::System.Data.TypedTableBase<HealthCenterRow> {
             
-            private global::System.Data.DataColumn columnMedicineID;
+            private global::System.Data.DataColumn columnHCenterID;
             
-            private global::System.Data.DataColumn columnMedicine;
+            private global::System.Data.DataColumn columnClerkName;
             
-            private global::System.Data.DataColumn columnUOM;
+            private global::System.Data.DataColumn columnClerkContactNumber;
             
-            private global::System.Data.DataColumn columnItemCode;
+            private global::System.Data.DataColumn columnOICName;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public MedicineDataTable() {
-                this.TableName = "Medicine";
+            public HealthCenterDataTable() {
+                this.TableName = "HealthCenter";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1198,7 +1178,7 @@ namespace Medicine_Inventory {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal MedicineDataTable(global::System.Data.DataTable table) {
+            internal HealthCenterDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1215,40 +1195,40 @@ namespace Medicine_Inventory {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected MedicineDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected HealthCenterDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn MedicineIDColumn {
+            public global::System.Data.DataColumn HCenterIDColumn {
                 get {
-                    return this.columnMedicineID;
+                    return this.columnHCenterID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn MedicineColumn {
+            public global::System.Data.DataColumn ClerkNameColumn {
                 get {
-                    return this.columnMedicine;
+                    return this.columnClerkName;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn UOMColumn {
+            public global::System.Data.DataColumn ClerkContactNumberColumn {
                 get {
-                    return this.columnUOM;
+                    return this.columnClerkContactNumber;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ItemCodeColumn {
+            public global::System.Data.DataColumn OICNameColumn {
                 get {
-                    return this.columnItemCode;
+                    return this.columnOICName;
                 }
             }
             
@@ -1263,55 +1243,55 @@ namespace Medicine_Inventory {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public MedicineRow this[int index] {
+            public HealthCenterRow this[int index] {
                 get {
-                    return ((MedicineRow)(this.Rows[index]));
+                    return ((HealthCenterRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event MedicineRowChangeEventHandler MedicineRowChanging;
+            public event HealthCenterRowChangeEventHandler HealthCenterRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event MedicineRowChangeEventHandler MedicineRowChanged;
+            public event HealthCenterRowChangeEventHandler HealthCenterRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event MedicineRowChangeEventHandler MedicineRowDeleting;
+            public event HealthCenterRowChangeEventHandler HealthCenterRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event MedicineRowChangeEventHandler MedicineRowDeleted;
+            public event HealthCenterRowChangeEventHandler HealthCenterRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddMedicineRow(MedicineRow row) {
+            public void AddHealthCenterRow(HealthCenterRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public MedicineRow AddMedicineRow(string Medicine, string UOM, string ItemCode) {
-                MedicineRow rowMedicineRow = ((MedicineRow)(this.NewRow()));
+            public HealthCenterRow AddHealthCenterRow(int HCenterID, string ClerkName, int ClerkContactNumber, string OICName) {
+                HealthCenterRow rowHealthCenterRow = ((HealthCenterRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
-                        Medicine,
-                        UOM,
-                        ItemCode};
-                rowMedicineRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowMedicineRow);
-                return rowMedicineRow;
+                        HCenterID,
+                        ClerkName,
+                        ClerkContactNumber,
+                        OICName};
+                rowHealthCenterRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowHealthCenterRow);
+                return rowHealthCenterRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public MedicineRow FindByMedicineID(int MedicineID) {
-                return ((MedicineRow)(this.Rows.Find(new object[] {
-                            MedicineID})));
+            public HealthCenterRow FindByHCenterID(int HCenterID) {
+                return ((HealthCenterRow)(this.Rows.Find(new object[] {
+                            HCenterID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                MedicineDataTable cln = ((MedicineDataTable)(base.Clone()));
+                HealthCenterDataTable cln = ((HealthCenterDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1319,68 +1299,61 @@ namespace Medicine_Inventory {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new MedicineDataTable();
+                return new HealthCenterDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnMedicineID = base.Columns["MedicineID"];
-                this.columnMedicine = base.Columns["Medicine"];
-                this.columnUOM = base.Columns["UOM"];
-                this.columnItemCode = base.Columns["ItemCode"];
+                this.columnHCenterID = base.Columns["HCenterID"];
+                this.columnClerkName = base.Columns["ClerkName"];
+                this.columnClerkContactNumber = base.Columns["ClerkContactNumber"];
+                this.columnOICName = base.Columns["OICName"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnMedicineID = new global::System.Data.DataColumn("MedicineID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMedicineID);
-                this.columnMedicine = new global::System.Data.DataColumn("Medicine", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMedicine);
-                this.columnUOM = new global::System.Data.DataColumn("UOM", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUOM);
-                this.columnItemCode = new global::System.Data.DataColumn("ItemCode", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnItemCode);
+                this.columnHCenterID = new global::System.Data.DataColumn("HCenterID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHCenterID);
+                this.columnClerkName = new global::System.Data.DataColumn("ClerkName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnClerkName);
+                this.columnClerkContactNumber = new global::System.Data.DataColumn("ClerkContactNumber", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnClerkContactNumber);
+                this.columnOICName = new global::System.Data.DataColumn("OICName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOICName);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnMedicineID}, true));
-                this.columnMedicineID.AutoIncrement = true;
-                this.columnMedicineID.AutoIncrementSeed = -1;
-                this.columnMedicineID.AutoIncrementStep = -1;
-                this.columnMedicineID.AllowDBNull = false;
-                this.columnMedicineID.ReadOnly = true;
-                this.columnMedicineID.Unique = true;
-                this.columnMedicine.AllowDBNull = false;
-                this.columnMedicine.MaxLength = 200;
-                this.columnUOM.AllowDBNull = false;
-                this.columnUOM.MaxLength = 10;
-                this.columnItemCode.MaxLength = 150;
+                                this.columnHCenterID}, true));
+                this.columnHCenterID.AllowDBNull = false;
+                this.columnHCenterID.Unique = true;
+                this.columnClerkName.MaxLength = 100;
+                this.columnOICName.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public MedicineRow NewMedicineRow() {
-                return ((MedicineRow)(this.NewRow()));
+            public HealthCenterRow NewHealthCenterRow() {
+                return ((HealthCenterRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new MedicineRow(builder);
+                return new HealthCenterRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(MedicineRow);
+                return typeof(HealthCenterRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.MedicineRowChanged != null)) {
-                    this.MedicineRowChanged(this, new MedicineRowChangeEvent(((MedicineRow)(e.Row)), e.Action));
+                if ((this.HealthCenterRowChanged != null)) {
+                    this.HealthCenterRowChanged(this, new HealthCenterRowChangeEvent(((HealthCenterRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1388,8 +1361,8 @@ namespace Medicine_Inventory {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.MedicineRowChanging != null)) {
-                    this.MedicineRowChanging(this, new MedicineRowChangeEvent(((MedicineRow)(e.Row)), e.Action));
+                if ((this.HealthCenterRowChanging != null)) {
+                    this.HealthCenterRowChanging(this, new HealthCenterRowChangeEvent(((HealthCenterRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1397,8 +1370,8 @@ namespace Medicine_Inventory {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.MedicineRowDeleted != null)) {
-                    this.MedicineRowDeleted(this, new MedicineRowChangeEvent(((MedicineRow)(e.Row)), e.Action));
+                if ((this.HealthCenterRowDeleted != null)) {
+                    this.HealthCenterRowDeleted(this, new HealthCenterRowChangeEvent(((HealthCenterRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1406,14 +1379,14 @@ namespace Medicine_Inventory {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.MedicineRowDeleting != null)) {
-                    this.MedicineRowDeleting(this, new MedicineRowChangeEvent(((MedicineRow)(e.Row)), e.Action));
+                if ((this.HealthCenterRowDeleting != null)) {
+                    this.HealthCenterRowDeleting(this, new HealthCenterRowChangeEvent(((HealthCenterRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveMedicineRow(MedicineRow row) {
+            public void RemoveHealthCenterRow(HealthCenterRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1440,7 +1413,7 @@ namespace Medicine_Inventory {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "MedicineDataTable";
+                attribute2.FixedValue = "HealthCenterDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1486,7 +1459,7 @@ namespace Medicine_Inventory {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class HOInitialBalanceDataTable : global::System.Data.TypedTableBase<HOInitialBalanceRow> {
+        public partial class HCInitialBalanceDataTable : global::System.Data.TypedTableBase<HCInitialBalanceRow> {
             
             private global::System.Data.DataColumn columnMedicineID;
             
@@ -1496,10 +1469,12 @@ namespace Medicine_Inventory {
             
             private global::System.Data.DataColumn columnItemCode;
             
+            private global::System.Data.DataColumn columnHCenterID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public HOInitialBalanceDataTable() {
-                this.TableName = "HOInitialBalance";
+            public HCInitialBalanceDataTable() {
+                this.TableName = "HCInitialBalance";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1507,7 +1482,7 @@ namespace Medicine_Inventory {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal HOInitialBalanceDataTable(global::System.Data.DataTable table) {
+            internal HCInitialBalanceDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1524,7 +1499,7 @@ namespace Medicine_Inventory {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected HOInitialBalanceDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected HCInitialBalanceDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -1563,6 +1538,14 @@ namespace Medicine_Inventory {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn HCenterIDColumn {
+                get {
+                    return this.columnHCenterID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1572,55 +1555,59 @@ namespace Medicine_Inventory {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public HOInitialBalanceRow this[int index] {
+            public HCInitialBalanceRow this[int index] {
                 get {
-                    return ((HOInitialBalanceRow)(this.Rows[index]));
+                    return ((HCInitialBalanceRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event HOInitialBalanceRowChangeEventHandler HOInitialBalanceRowChanging;
+            public event HCInitialBalanceRowChangeEventHandler HCInitialBalanceRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event HOInitialBalanceRowChangeEventHandler HOInitialBalanceRowChanged;
+            public event HCInitialBalanceRowChangeEventHandler HCInitialBalanceRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event HOInitialBalanceRowChangeEventHandler HOInitialBalanceRowDeleting;
+            public event HCInitialBalanceRowChangeEventHandler HCInitialBalanceRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event HOInitialBalanceRowChangeEventHandler HOInitialBalanceRowDeleted;
+            public event HCInitialBalanceRowChangeEventHandler HCInitialBalanceRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddHOInitialBalanceRow(HOInitialBalanceRow row) {
+            public void AddHCInitialBalanceRow(HCInitialBalanceRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public HOInitialBalanceRow AddHOInitialBalanceRow(string Medicine, string UOM, string ItemCode) {
-                HOInitialBalanceRow rowHOInitialBalanceRow = ((HOInitialBalanceRow)(this.NewRow()));
+            public HCInitialBalanceRow AddHCInitialBalanceRow(string Medicine, string UOM, string ItemCode, HealthCenterRow _parentHealthCenterRowByFK_HCInitialBalance_HealthCenter__HealthCenter_) {
+                HCInitialBalanceRow rowHCInitialBalanceRow = ((HCInitialBalanceRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Medicine,
                         UOM,
-                        ItemCode};
-                rowHOInitialBalanceRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowHOInitialBalanceRow);
-                return rowHOInitialBalanceRow;
+                        ItemCode,
+                        null};
+                if ((_parentHealthCenterRowByFK_HCInitialBalance_HealthCenter__HealthCenter_ != null)) {
+                    columnValuesArray[4] = _parentHealthCenterRowByFK_HCInitialBalance_HealthCenter__HealthCenter_[0];
+                }
+                rowHCInitialBalanceRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowHCInitialBalanceRow);
+                return rowHCInitialBalanceRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public HOInitialBalanceRow FindByMedicineID(int MedicineID) {
-                return ((HOInitialBalanceRow)(this.Rows.Find(new object[] {
+            public HCInitialBalanceRow FindByMedicineID(int MedicineID) {
+                return ((HCInitialBalanceRow)(this.Rows.Find(new object[] {
                             MedicineID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                HOInitialBalanceDataTable cln = ((HOInitialBalanceDataTable)(base.Clone()));
+                HCInitialBalanceDataTable cln = ((HCInitialBalanceDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1628,7 +1615,7 @@ namespace Medicine_Inventory {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new HOInitialBalanceDataTable();
+                return new HCInitialBalanceDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1638,6 +1625,7 @@ namespace Medicine_Inventory {
                 this.columnMedicine = base.Columns["Medicine"];
                 this.columnUOM = base.Columns["UOM"];
                 this.columnItemCode = base.Columns["ItemCode"];
+                this.columnHCenterID = base.Columns["HCenterID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1651,6 +1639,8 @@ namespace Medicine_Inventory {
                 base.Columns.Add(this.columnUOM);
                 this.columnItemCode = new global::System.Data.DataColumn("ItemCode", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnItemCode);
+                this.columnHCenterID = new global::System.Data.DataColumn("HCenterID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHCenterID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnMedicineID}, true));
                 this.columnMedicineID.AutoIncrement = true;
@@ -1664,32 +1654,33 @@ namespace Medicine_Inventory {
                 this.columnUOM.AllowDBNull = false;
                 this.columnUOM.MaxLength = 10;
                 this.columnItemCode.MaxLength = 150;
+                this.columnHCenterID.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public HOInitialBalanceRow NewHOInitialBalanceRow() {
-                return ((HOInitialBalanceRow)(this.NewRow()));
+            public HCInitialBalanceRow NewHCInitialBalanceRow() {
+                return ((HCInitialBalanceRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new HOInitialBalanceRow(builder);
+                return new HCInitialBalanceRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(HOInitialBalanceRow);
+                return typeof(HCInitialBalanceRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.HOInitialBalanceRowChanged != null)) {
-                    this.HOInitialBalanceRowChanged(this, new HOInitialBalanceRowChangeEvent(((HOInitialBalanceRow)(e.Row)), e.Action));
+                if ((this.HCInitialBalanceRowChanged != null)) {
+                    this.HCInitialBalanceRowChanged(this, new HCInitialBalanceRowChangeEvent(((HCInitialBalanceRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1697,8 +1688,8 @@ namespace Medicine_Inventory {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.HOInitialBalanceRowChanging != null)) {
-                    this.HOInitialBalanceRowChanging(this, new HOInitialBalanceRowChangeEvent(((HOInitialBalanceRow)(e.Row)), e.Action));
+                if ((this.HCInitialBalanceRowChanging != null)) {
+                    this.HCInitialBalanceRowChanging(this, new HCInitialBalanceRowChangeEvent(((HCInitialBalanceRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1706,8 +1697,8 @@ namespace Medicine_Inventory {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.HOInitialBalanceRowDeleted != null)) {
-                    this.HOInitialBalanceRowDeleted(this, new HOInitialBalanceRowChangeEvent(((HOInitialBalanceRow)(e.Row)), e.Action));
+                if ((this.HCInitialBalanceRowDeleted != null)) {
+                    this.HCInitialBalanceRowDeleted(this, new HCInitialBalanceRowChangeEvent(((HCInitialBalanceRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1715,14 +1706,14 @@ namespace Medicine_Inventory {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.HOInitialBalanceRowDeleting != null)) {
-                    this.HOInitialBalanceRowDeleting(this, new HOInitialBalanceRowChangeEvent(((HOInitialBalanceRow)(e.Row)), e.Action));
+                if ((this.HCInitialBalanceRowDeleting != null)) {
+                    this.HCInitialBalanceRowDeleting(this, new HCInitialBalanceRowChangeEvent(((HCInitialBalanceRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveHOInitialBalanceRow(HOInitialBalanceRow row) {
+            public void RemoveHCInitialBalanceRow(HCInitialBalanceRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1749,7 +1740,7 @@ namespace Medicine_Inventory {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "HOInitialBalanceDataTable";
+                attribute2.FixedValue = "HCInitialBalanceDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1910,17 +1901,6 @@ namespace Medicine_Inventory {
                 }
                 set {
                     this[this.tablePurchaseTransaction.SupplierColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public MedicineRow MedicineRow {
-                get {
-                    return ((MedicineRow)(this.GetParentRow(this.Table.ParentRelations["FK_PurchaseTransaction_MedicineID(Medicine)"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_PurchaseTransaction_MedicineID(Medicine)"]);
                 }
             }
             
@@ -2091,17 +2071,6 @@ namespace Medicine_Inventory {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public MedicineRow MedicineRow {
-                get {
-                    return ((MedicineRow)(this.GetParentRow(this.Table.ParentRelations["FK_OthersTransaction_Medicine (Medicine)"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_OthersTransaction_Medicine (Medicine)"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsExpiryDateNull() {
                 return this.IsNull(this.tableOthersTransaction.ExpiryDateColumn);
             }
@@ -2116,108 +2085,120 @@ namespace Medicine_Inventory {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class MedicineRow : global::System.Data.DataRow {
+        public partial class HealthCenterRow : global::System.Data.DataRow {
             
-            private MedicineDataTable tableMedicine;
+            private HealthCenterDataTable tableHealthCenter;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal MedicineRow(global::System.Data.DataRowBuilder rb) : 
+            internal HealthCenterRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableMedicine = ((MedicineDataTable)(this.Table));
+                this.tableHealthCenter = ((HealthCenterDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int MedicineID {
+            public int HCenterID {
                 get {
-                    return ((int)(this[this.tableMedicine.MedicineIDColumn]));
+                    return ((int)(this[this.tableHealthCenter.HCenterIDColumn]));
                 }
                 set {
-                    this[this.tableMedicine.MedicineIDColumn] = value;
+                    this[this.tableHealthCenter.HCenterIDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Medicine {
-                get {
-                    return ((string)(this[this.tableMedicine.MedicineColumn]));
-                }
-                set {
-                    this[this.tableMedicine.MedicineColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string UOM {
-                get {
-                    return ((string)(this[this.tableMedicine.UOMColumn]));
-                }
-                set {
-                    this[this.tableMedicine.UOMColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string ItemCode {
+            public string ClerkName {
                 get {
                     try {
-                        return ((string)(this[this.tableMedicine.ItemCodeColumn]));
+                        return ((string)(this[this.tableHealthCenter.ClerkNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ItemCode\' in table \'Medicine\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ClerkName\' in table \'HealthCenter\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableMedicine.ItemCodeColumn] = value;
+                    this[this.tableHealthCenter.ClerkNameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsItemCodeNull() {
-                return this.IsNull(this.tableMedicine.ItemCodeColumn);
+            public int ClerkContactNumber {
+                get {
+                    try {
+                        return ((int)(this[this.tableHealthCenter.ClerkContactNumberColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ClerkContactNumber\' in table \'HealthCenter\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableHealthCenter.ClerkContactNumberColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetItemCodeNull() {
-                this[this.tableMedicine.ItemCodeColumn] = global::System.Convert.DBNull;
+            public string OICName {
+                get {
+                    try {
+                        return ((string)(this[this.tableHealthCenter.OICNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'OICName\' in table \'HealthCenter\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableHealthCenter.OICNameColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PurchaseTransactionRow[] GetPurchaseTransactionRows() {
-                if ((this.Table.ChildRelations["FK_PurchaseTransaction_MedicineID(Medicine)"] == null)) {
-                    return new PurchaseTransactionRow[0];
+            public bool IsClerkNameNull() {
+                return this.IsNull(this.tableHealthCenter.ClerkNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetClerkNameNull() {
+                this[this.tableHealthCenter.ClerkNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsClerkContactNumberNull() {
+                return this.IsNull(this.tableHealthCenter.ClerkContactNumberColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetClerkContactNumberNull() {
+                this[this.tableHealthCenter.ClerkContactNumberColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsOICNameNull() {
+                return this.IsNull(this.tableHealthCenter.OICNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetOICNameNull() {
+                this[this.tableHealthCenter.OICNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public HCInitialBalanceRow[] GetHCInitialBalanceRows() {
+                if ((this.Table.ChildRelations["FK_HCInitialBalance_HealthCenter (HealthCenter)"] == null)) {
+                    return new HCInitialBalanceRow[0];
                 }
                 else {
-                    return ((PurchaseTransactionRow[])(base.GetChildRows(this.Table.ChildRelations["FK_PurchaseTransaction_MedicineID(Medicine)"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public OthersTransactionRow[] GetOthersTransactionRows() {
-                if ((this.Table.ChildRelations["FK_OthersTransaction_Medicine (Medicine)"] == null)) {
-                    return new OthersTransactionRow[0];
-                }
-                else {
-                    return ((OthersTransactionRow[])(base.GetChildRows(this.Table.ChildRelations["FK_OthersTransaction_Medicine (Medicine)"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public HOInitialBalanceRow[] GetHOInitialBalanceRows() {
-                if ((this.Table.ChildRelations["FK_HOInitialBalance_Medicine (Medicine)"] == null)) {
-                    return new HOInitialBalanceRow[0];
-                }
-                else {
-                    return ((HOInitialBalanceRow[])(base.GetChildRows(this.Table.ChildRelations["FK_HOInitialBalance_Medicine (Medicine)"])));
+                    return ((HCInitialBalanceRow[])(base.GetChildRows(this.Table.ChildRelations["FK_HCInitialBalance_HealthCenter (HealthCenter)"])));
                 }
             }
         }
@@ -2225,25 +2206,25 @@ namespace Medicine_Inventory {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class HOInitialBalanceRow : global::System.Data.DataRow {
+        public partial class HCInitialBalanceRow : global::System.Data.DataRow {
             
-            private HOInitialBalanceDataTable tableHOInitialBalance;
+            private HCInitialBalanceDataTable tableHCInitialBalance;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal HOInitialBalanceRow(global::System.Data.DataRowBuilder rb) : 
+            internal HCInitialBalanceRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableHOInitialBalance = ((HOInitialBalanceDataTable)(this.Table));
+                this.tableHCInitialBalance = ((HCInitialBalanceDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int MedicineID {
                 get {
-                    return ((int)(this[this.tableHOInitialBalance.MedicineIDColumn]));
+                    return ((int)(this[this.tableHCInitialBalance.MedicineIDColumn]));
                 }
                 set {
-                    this[this.tableHOInitialBalance.MedicineIDColumn] = value;
+                    this[this.tableHCInitialBalance.MedicineIDColumn] = value;
                 }
             }
             
@@ -2251,10 +2232,10 @@ namespace Medicine_Inventory {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string Medicine {
                 get {
-                    return ((string)(this[this.tableHOInitialBalance.MedicineColumn]));
+                    return ((string)(this[this.tableHCInitialBalance.MedicineColumn]));
                 }
                 set {
-                    this[this.tableHOInitialBalance.MedicineColumn] = value;
+                    this[this.tableHCInitialBalance.MedicineColumn] = value;
                 }
             }
             
@@ -2262,10 +2243,10 @@ namespace Medicine_Inventory {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string UOM {
                 get {
-                    return ((string)(this[this.tableHOInitialBalance.UOMColumn]));
+                    return ((string)(this[this.tableHCInitialBalance.UOMColumn]));
                 }
                 set {
-                    this[this.tableHOInitialBalance.UOMColumn] = value;
+                    this[this.tableHCInitialBalance.UOMColumn] = value;
                 }
             }
             
@@ -2274,38 +2255,49 @@ namespace Medicine_Inventory {
             public string ItemCode {
                 get {
                     try {
-                        return ((string)(this[this.tableHOInitialBalance.ItemCodeColumn]));
+                        return ((string)(this[this.tableHCInitialBalance.ItemCodeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ItemCode\' in table \'HOInitialBalance\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ItemCode\' in table \'HCInitialBalance\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableHOInitialBalance.ItemCodeColumn] = value;
+                    this[this.tableHCInitialBalance.ItemCodeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public MedicineRow MedicineRow {
+            public int HCenterID {
                 get {
-                    return ((MedicineRow)(this.GetParentRow(this.Table.ParentRelations["FK_HOInitialBalance_Medicine (Medicine)"])));
+                    return ((int)(this[this.tableHCInitialBalance.HCenterIDColumn]));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_HOInitialBalance_Medicine (Medicine)"]);
+                    this[this.tableHCInitialBalance.HCenterIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public HealthCenterRow HealthCenterRow {
+                get {
+                    return ((HealthCenterRow)(this.GetParentRow(this.Table.ParentRelations["FK_HCInitialBalance_HealthCenter (HealthCenter)"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_HCInitialBalance_HealthCenter (HealthCenter)"]);
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsItemCodeNull() {
-                return this.IsNull(this.tableHOInitialBalance.ItemCodeColumn);
+                return this.IsNull(this.tableHCInitialBalance.ItemCodeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetItemCodeNull() {
-                this[this.tableHOInitialBalance.ItemCodeColumn] = global::System.Convert.DBNull;
+                this[this.tableHCInitialBalance.ItemCodeColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2381,22 +2373,22 @@ namespace Medicine_Inventory {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class MedicineRowChangeEvent : global::System.EventArgs {
+        public class HealthCenterRowChangeEvent : global::System.EventArgs {
             
-            private MedicineRow eventRow;
+            private HealthCenterRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public MedicineRowChangeEvent(MedicineRow row, global::System.Data.DataRowAction action) {
+            public HealthCenterRowChangeEvent(HealthCenterRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public MedicineRow Row {
+            public HealthCenterRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -2415,22 +2407,22 @@ namespace Medicine_Inventory {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class HOInitialBalanceRowChangeEvent : global::System.EventArgs {
+        public class HCInitialBalanceRowChangeEvent : global::System.EventArgs {
             
-            private HOInitialBalanceRow eventRow;
+            private HCInitialBalanceRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public HOInitialBalanceRowChangeEvent(HOInitialBalanceRow row, global::System.Data.DataRowAction action) {
+            public HCInitialBalanceRowChangeEvent(HCInitialBalanceRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public HOInitialBalanceRow Row {
+            public HCInitialBalanceRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3410,7 +3402,7 @@ SELECT OthersTransacID, Date, Recipient, Medicine, MedicineID, PurchaseID, Price
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class MedicineTableAdapter : global::System.ComponentModel.Component {
+    public partial class HealthCenterTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -3424,7 +3416,7 @@ SELECT OthersTransacID, Date, Recipient, Medicine, MedicineID, PurchaseID, Price
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public MedicineTableAdapter() {
+        public HealthCenterTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -3521,46 +3513,48 @@ SELECT OthersTransacID, Date, Recipient, Medicine, MedicineID, PurchaseID, Price
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Medicine";
-            tableMapping.ColumnMappings.Add("MedicineID", "MedicineID");
-            tableMapping.ColumnMappings.Add("Medicine", "Medicine");
-            tableMapping.ColumnMappings.Add("UOM", "UOM");
-            tableMapping.ColumnMappings.Add("ItemCode", "ItemCode");
+            tableMapping.DataSetTable = "HealthCenter";
+            tableMapping.ColumnMappings.Add("HCenterID", "HCenterID");
+            tableMapping.ColumnMappings.Add("ClerkName", "ClerkName");
+            tableMapping.ColumnMappings.Add("ClerkContactNumber", "ClerkContactNumber");
+            tableMapping.ColumnMappings.Add("OICName", "OICName");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Medicine] WHERE (([MedicineID] = @Original_MedicineID) AND ([M" +
-                "edicine] = @Original_Medicine) AND ([UOM] = @Original_UOM) AND ((@IsNull_ItemCod" +
-                "e = 1 AND [ItemCode] IS NULL) OR ([ItemCode] = @Original_ItemCode)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[HealthCenter] WHERE (([HCenterID] = @Original_HCenterID) AND ((@IsNull_ClerkName = 1 AND [ClerkName] IS NULL) OR ([ClerkName] = @Original_ClerkName)) AND ((@IsNull_ClerkContactNumber = 1 AND [ClerkContactNumber] IS NULL) OR ([ClerkContactNumber] = @Original_ClerkContactNumber)) AND ((@IsNull_OICName = 1 AND [OICName] IS NULL) OR ([OICName] = @Original_OICName)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MedicineID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MedicineID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Medicine", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Medicine", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UOM", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UOM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ItemCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ItemCode", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HCenterID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HCenterID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ClerkName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClerkName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ClerkName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClerkName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ClerkContactNumber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClerkContactNumber", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ClerkContactNumber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClerkContactNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_OICName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OICName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_OICName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OICName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Medicine] ([Medicine], [UOM], [ItemCode]) VALUES (@Medicine, @" +
-                "UOM, @ItemCode);\r\nSELECT MedicineID, Medicine, UOM, ItemCode FROM Medicine WHERE" +
-                " (MedicineID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[HealthCenter] ([HCenterID], [ClerkName], [ClerkContactNumber], [OICName]) VALUES (@HCenterID, @ClerkName, @ClerkContactNumber, @OICName);
+SELECT HCenterID, ClerkName, ClerkContactNumber, OICName FROM HealthCenter WHERE (HCenterID = @HCenterID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Medicine", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Medicine", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UOM", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UOM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ItemCode", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HCenterID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HCenterID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClerkName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClerkName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClerkContactNumber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClerkContactNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OICName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OICName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Medicine] SET [Medicine] = @Medicine, [UOM] = @UOM, [ItemCode] = @ItemCode WHERE (([MedicineID] = @Original_MedicineID) AND ([Medicine] = @Original_Medicine) AND ([UOM] = @Original_UOM) AND ((@IsNull_ItemCode = 1 AND [ItemCode] IS NULL) OR ([ItemCode] = @Original_ItemCode)));
-SELECT MedicineID, Medicine, UOM, ItemCode FROM Medicine WHERE (MedicineID = @MedicineID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[HealthCenter] SET [HCenterID] = @HCenterID, [ClerkName] = @ClerkName, [ClerkContactNumber] = @ClerkContactNumber, [OICName] = @OICName WHERE (([HCenterID] = @Original_HCenterID) AND ((@IsNull_ClerkName = 1 AND [ClerkName] IS NULL) OR ([ClerkName] = @Original_ClerkName)) AND ((@IsNull_ClerkContactNumber = 1 AND [ClerkContactNumber] IS NULL) OR ([ClerkContactNumber] = @Original_ClerkContactNumber)) AND ((@IsNull_OICName = 1 AND [OICName] IS NULL) OR ([OICName] = @Original_OICName)));
+SELECT HCenterID, ClerkName, ClerkContactNumber, OICName FROM HealthCenter WHERE (HCenterID = @HCenterID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Medicine", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Medicine", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UOM", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UOM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ItemCode", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MedicineID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MedicineID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Medicine", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Medicine", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UOM", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UOM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ItemCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ItemCode", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MedicineID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "MedicineID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HCenterID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HCenterID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClerkName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClerkName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClerkContactNumber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClerkContactNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OICName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OICName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HCenterID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HCenterID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ClerkName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClerkName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ClerkName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClerkName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ClerkContactNumber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClerkContactNumber", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ClerkContactNumber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClerkContactNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_OICName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OICName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_OICName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OICName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3576,7 +3570,7 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM Medicine WHERE (MedicineID = @Me
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT MedicineID, Medicine, UOM, ItemCode FROM dbo.Medicine";
+            this._commandCollection[0].CommandText = "SELECT HCenterID, ClerkName, ClerkContactNumber, OICName FROM dbo.HealthCenter";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3584,7 +3578,7 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM Medicine WHERE (MedicineID = @Me
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(MedicineInventoryDataSet.MedicineDataTable dataTable) {
+        public virtual int Fill(MedicineInventoryDataSet.HealthCenterDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3597,9 +3591,9 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM Medicine WHERE (MedicineID = @Me
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual MedicineInventoryDataSet.MedicineDataTable GetData() {
+        public virtual MedicineInventoryDataSet.HealthCenterDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            MedicineInventoryDataSet.MedicineDataTable dataTable = new MedicineInventoryDataSet.MedicineDataTable();
+            MedicineInventoryDataSet.HealthCenterDataTable dataTable = new MedicineInventoryDataSet.HealthCenterDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3607,7 +3601,7 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM Medicine WHERE (MedicineID = @Me
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(MedicineInventoryDataSet.MedicineDataTable dataTable) {
+        public virtual int Update(MedicineInventoryDataSet.HealthCenterDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -3615,7 +3609,7 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM Medicine WHERE (MedicineID = @Me
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(MedicineInventoryDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Medicine");
+            return this.Adapter.Update(dataSet, "HealthCenter");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3637,27 +3631,31 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM Medicine WHERE (MedicineID = @Me
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_MedicineID, string Original_Medicine, string Original_UOM, string Original_ItemCode) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_MedicineID));
-            if ((Original_Medicine == null)) {
-                throw new global::System.ArgumentNullException("Original_Medicine");
+        public virtual int Delete(int Original_HCenterID, string Original_ClerkName, global::System.Nullable<int> Original_ClerkContactNumber, string Original_OICName) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_HCenterID));
+            if ((Original_ClerkName == null)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Medicine));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_ClerkName));
             }
-            if ((Original_UOM == null)) {
-                throw new global::System.ArgumentNullException("Original_UOM");
+            if ((Original_ClerkContactNumber.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_ClerkContactNumber.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_UOM));
-            }
-            if ((Original_ItemCode == null)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
+            if ((Original_OICName == null)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_ItemCode));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_OICName));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3679,24 +3677,25 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM Medicine WHERE (MedicineID = @Me
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Medicine, string UOM, string ItemCode) {
-            if ((Medicine == null)) {
-                throw new global::System.ArgumentNullException("Medicine");
+        public virtual int Insert(int HCenterID, string ClerkName, global::System.Nullable<int> ClerkContactNumber, string OICName) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(HCenterID));
+            if ((ClerkName == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Medicine));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(ClerkName));
             }
-            if ((UOM == null)) {
-                throw new global::System.ArgumentNullException("UOM");
+            if ((ClerkContactNumber.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(ClerkContactNumber.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(UOM));
-            }
-            if ((ItemCode == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
+            if ((OICName == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(ItemCode));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(OICName));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3718,47 +3717,51 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM Medicine WHERE (MedicineID = @Me
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Medicine, string UOM, string ItemCode, int Original_MedicineID, string Original_Medicine, string Original_UOM, string Original_ItemCode, int MedicineID) {
-            if ((Medicine == null)) {
-                throw new global::System.ArgumentNullException("Medicine");
+        public virtual int Update(int HCenterID, string ClerkName, global::System.Nullable<int> ClerkContactNumber, string OICName, int Original_HCenterID, string Original_ClerkName, global::System.Nullable<int> Original_ClerkContactNumber, string Original_OICName) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(HCenterID));
+            if ((ClerkName == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Medicine));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(ClerkName));
             }
-            if ((UOM == null)) {
-                throw new global::System.ArgumentNullException("UOM");
+            if ((ClerkContactNumber.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(ClerkContactNumber.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(UOM));
-            }
-            if ((ItemCode == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(ItemCode));
-            }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_MedicineID));
-            if ((Original_Medicine == null)) {
-                throw new global::System.ArgumentNullException("Original_Medicine");
+            if ((OICName == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Medicine));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(OICName));
             }
-            if ((Original_UOM == null)) {
-                throw new global::System.ArgumentNullException("Original_UOM");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_UOM));
-            }
-            if ((Original_ItemCode == null)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_HCenterID));
+            if ((Original_ClerkName == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_ItemCode));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_ClerkName));
             }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(MedicineID));
+            if ((Original_ClerkContactNumber.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_ClerkContactNumber.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Original_OICName == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_OICName));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3779,8 +3782,8 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM Medicine WHERE (MedicineID = @Me
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Medicine, string UOM, string ItemCode, int Original_MedicineID, string Original_Medicine, string Original_UOM, string Original_ItemCode) {
-            return this.Update(Medicine, UOM, ItemCode, Original_MedicineID, Original_Medicine, Original_UOM, Original_ItemCode, Original_MedicineID);
+        public virtual int Update(string ClerkName, global::System.Nullable<int> ClerkContactNumber, string OICName, int Original_HCenterID, string Original_ClerkName, global::System.Nullable<int> Original_ClerkContactNumber, string Original_OICName) {
+            return this.Update(Original_HCenterID, ClerkName, ClerkContactNumber, OICName, Original_HCenterID, Original_ClerkName, Original_ClerkContactNumber, Original_OICName);
         }
     }
     
@@ -3793,7 +3796,7 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM Medicine WHERE (MedicineID = @Me
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class HOInitialBalanceTableAdapter : global::System.ComponentModel.Component {
+    public partial class HCInitialBalanceTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -3807,7 +3810,7 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM Medicine WHERE (MedicineID = @Me
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public HOInitialBalanceTableAdapter() {
+        public HCInitialBalanceTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -3904,45 +3907,49 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM Medicine WHERE (MedicineID = @Me
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "HOInitialBalance";
+            tableMapping.DataSetTable = "HCInitialBalance";
             tableMapping.ColumnMappings.Add("MedicineID", "MedicineID");
             tableMapping.ColumnMappings.Add("Medicine", "Medicine");
             tableMapping.ColumnMappings.Add("UOM", "UOM");
             tableMapping.ColumnMappings.Add("ItemCode", "ItemCode");
+            tableMapping.ColumnMappings.Add("HCenterID", "HCenterID");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[HOInitialBalance] WHERE (([MedicineID] = @Original_MedicineID)" +
-                " AND ([Medicine] = @Original_Medicine) AND ([UOM] = @Original_UOM) AND ((@IsNull" +
-                "_ItemCode = 1 AND [ItemCode] IS NULL) OR ([ItemCode] = @Original_ItemCode)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[HCInitialBalance] WHERE (([MedicineID] = @Original_MedicineID) AND ([Medicine] = @Original_Medicine) AND ([UOM] = @Original_UOM) AND ((@IsNull_ItemCode = 1 AND [ItemCode] IS NULL) OR ([ItemCode] = @Original_ItemCode)) AND ([HCenterID] = @Original_HCenterID))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MedicineID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MedicineID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Medicine", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Medicine", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UOM", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UOM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ItemCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ItemCode", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HCenterID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HCenterID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[HOInitialBalance] ([Medicine], [UOM], [ItemCode]) VALUES (@Med" +
-                "icine, @UOM, @ItemCode);\r\nSELECT MedicineID, Medicine, UOM, ItemCode FROM HOInit" +
-                "ialBalance WHERE (MedicineID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[HCInitialBalance] ([Medicine], [UOM], [ItemCode], [HCenterID])" +
+                " VALUES (@Medicine, @UOM, @ItemCode, @HCenterID);\r\nSELECT MedicineID, Medicine, " +
+                "UOM, ItemCode, HCenterID FROM HCInitialBalance WHERE (MedicineID = SCOPE_IDENTIT" +
+                "Y())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Medicine", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Medicine", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UOM", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UOM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ItemCode", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HCenterID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HCenterID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[HOInitialBalance] SET [Medicine] = @Medicine, [UOM] = @UOM, [ItemCode] = @ItemCode WHERE (([MedicineID] = @Original_MedicineID) AND ([Medicine] = @Original_Medicine) AND ([UOM] = @Original_UOM) AND ((@IsNull_ItemCode = 1 AND [ItemCode] IS NULL) OR ([ItemCode] = @Original_ItemCode)));
-SELECT MedicineID, Medicine, UOM, ItemCode FROM HOInitialBalance WHERE (MedicineID = @MedicineID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[HCInitialBalance] SET [Medicine] = @Medicine, [UOM] = @UOM, [ItemCode] = @ItemCode, [HCenterID] = @HCenterID WHERE (([MedicineID] = @Original_MedicineID) AND ([Medicine] = @Original_Medicine) AND ([UOM] = @Original_UOM) AND ((@IsNull_ItemCode = 1 AND [ItemCode] IS NULL) OR ([ItemCode] = @Original_ItemCode)) AND ([HCenterID] = @Original_HCenterID));
+SELECT MedicineID, Medicine, UOM, ItemCode, HCenterID FROM HCInitialBalance WHERE (MedicineID = @MedicineID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Medicine", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Medicine", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UOM", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UOM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ItemCode", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HCenterID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HCenterID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MedicineID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MedicineID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Medicine", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Medicine", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UOM", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UOM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ItemCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ItemCode", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ItemCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HCenterID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HCenterID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MedicineID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "MedicineID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -3959,7 +3966,7 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM HOInitialBalance WHERE (Medicine
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT MedicineID, Medicine, UOM, ItemCode FROM dbo.HOInitialBalance";
+            this._commandCollection[0].CommandText = "SELECT MedicineID, Medicine, UOM, ItemCode, HCenterID FROM dbo.HCInitialBalance";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3967,7 +3974,7 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM HOInitialBalance WHERE (Medicine
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(MedicineInventoryDataSet.HOInitialBalanceDataTable dataTable) {
+        public virtual int Fill(MedicineInventoryDataSet.HCInitialBalanceDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3980,9 +3987,9 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM HOInitialBalance WHERE (Medicine
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual MedicineInventoryDataSet.HOInitialBalanceDataTable GetData() {
+        public virtual MedicineInventoryDataSet.HCInitialBalanceDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            MedicineInventoryDataSet.HOInitialBalanceDataTable dataTable = new MedicineInventoryDataSet.HOInitialBalanceDataTable();
+            MedicineInventoryDataSet.HCInitialBalanceDataTable dataTable = new MedicineInventoryDataSet.HCInitialBalanceDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3990,7 +3997,7 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM HOInitialBalance WHERE (Medicine
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(MedicineInventoryDataSet.HOInitialBalanceDataTable dataTable) {
+        public virtual int Update(MedicineInventoryDataSet.HCInitialBalanceDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -3998,7 +4005,7 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM HOInitialBalance WHERE (Medicine
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(MedicineInventoryDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "HOInitialBalance");
+            return this.Adapter.Update(dataSet, "HCInitialBalance");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4020,7 +4027,7 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM HOInitialBalance WHERE (Medicine
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_MedicineID, string Original_Medicine, string Original_UOM, string Original_ItemCode) {
+        public virtual int Delete(int Original_MedicineID, string Original_Medicine, string Original_UOM, string Original_ItemCode, int Original_HCenterID) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_MedicineID));
             if ((Original_Medicine == null)) {
                 throw new global::System.ArgumentNullException("Original_Medicine");
@@ -4042,6 +4049,7 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM HOInitialBalance WHERE (Medicine
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_ItemCode));
             }
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_HCenterID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4062,7 +4070,7 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM HOInitialBalance WHERE (Medicine
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Medicine, string UOM, string ItemCode) {
+        public virtual int Insert(string Medicine, string UOM, string ItemCode, int HCenterID) {
             if ((Medicine == null)) {
                 throw new global::System.ArgumentNullException("Medicine");
             }
@@ -4081,6 +4089,7 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM HOInitialBalance WHERE (Medicine
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(ItemCode));
             }
+            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(HCenterID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4101,7 +4110,7 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM HOInitialBalance WHERE (Medicine
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Medicine, string UOM, string ItemCode, int Original_MedicineID, string Original_Medicine, string Original_UOM, string Original_ItemCode, int MedicineID) {
+        public virtual int Update(string Medicine, string UOM, string ItemCode, int HCenterID, int Original_MedicineID, string Original_Medicine, string Original_UOM, string Original_ItemCode, int Original_HCenterID, int MedicineID) {
             if ((Medicine == null)) {
                 throw new global::System.ArgumentNullException("Medicine");
             }
@@ -4120,28 +4129,30 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM HOInitialBalance WHERE (Medicine
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(ItemCode));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_MedicineID));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(HCenterID));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_MedicineID));
             if ((Original_Medicine == null)) {
                 throw new global::System.ArgumentNullException("Original_Medicine");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Medicine));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_Medicine));
             }
             if ((Original_UOM == null)) {
                 throw new global::System.ArgumentNullException("Original_UOM");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_UOM));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_UOM));
             }
             if ((Original_ItemCode == null)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_ItemCode));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_ItemCode));
             }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(MedicineID));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_HCenterID));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(MedicineID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4162,8 +4173,8 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM HOInitialBalance WHERE (Medicine
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Medicine, string UOM, string ItemCode, int Original_MedicineID, string Original_Medicine, string Original_UOM, string Original_ItemCode) {
-            return this.Update(Medicine, UOM, ItemCode, Original_MedicineID, Original_Medicine, Original_UOM, Original_ItemCode, Original_MedicineID);
+        public virtual int Update(string Medicine, string UOM, string ItemCode, int HCenterID, int Original_MedicineID, string Original_Medicine, string Original_UOM, string Original_ItemCode, int Original_HCenterID) {
+            return this.Update(Medicine, UOM, ItemCode, HCenterID, Original_MedicineID, Original_Medicine, Original_UOM, Original_ItemCode, Original_HCenterID, Original_MedicineID);
         }
     }
     
@@ -4183,9 +4194,9 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM HOInitialBalance WHERE (Medicine
         
         private OthersTransactionTableAdapter _othersTransactionTableAdapter;
         
-        private MedicineTableAdapter _medicineTableAdapter;
+        private HealthCenterTableAdapter _healthCenterTableAdapter;
         
-        private HOInitialBalanceTableAdapter _hOInitialBalanceTableAdapter;
+        private HCInitialBalanceTableAdapter _hCInitialBalanceTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -4235,12 +4246,12 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM HOInitialBalance WHERE (Medicine
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public MedicineTableAdapter MedicineTableAdapter {
+        public HealthCenterTableAdapter HealthCenterTableAdapter {
             get {
-                return this._medicineTableAdapter;
+                return this._healthCenterTableAdapter;
             }
             set {
-                this._medicineTableAdapter = value;
+                this._healthCenterTableAdapter = value;
             }
         }
         
@@ -4249,12 +4260,12 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM HOInitialBalance WHERE (Medicine
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public HOInitialBalanceTableAdapter HOInitialBalanceTableAdapter {
+        public HCInitialBalanceTableAdapter HCInitialBalanceTableAdapter {
             get {
-                return this._hOInitialBalanceTableAdapter;
+                return this._hCInitialBalanceTableAdapter;
             }
             set {
-                this._hOInitialBalanceTableAdapter = value;
+                this._hCInitialBalanceTableAdapter = value;
             }
         }
         
@@ -4285,13 +4296,13 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM HOInitialBalance WHERE (Medicine
                             && (this._othersTransactionTableAdapter.Connection != null))) {
                     return this._othersTransactionTableAdapter.Connection;
                 }
-                if (((this._medicineTableAdapter != null) 
-                            && (this._medicineTableAdapter.Connection != null))) {
-                    return this._medicineTableAdapter.Connection;
+                if (((this._healthCenterTableAdapter != null) 
+                            && (this._healthCenterTableAdapter.Connection != null))) {
+                    return this._healthCenterTableAdapter.Connection;
                 }
-                if (((this._hOInitialBalanceTableAdapter != null) 
-                            && (this._hOInitialBalanceTableAdapter.Connection != null))) {
-                    return this._hOInitialBalanceTableAdapter.Connection;
+                if (((this._hCInitialBalanceTableAdapter != null) 
+                            && (this._hCInitialBalanceTableAdapter.Connection != null))) {
+                    return this._hCInitialBalanceTableAdapter.Connection;
                 }
                 return null;
             }
@@ -4312,10 +4323,10 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM HOInitialBalance WHERE (Medicine
                 if ((this._othersTransactionTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._medicineTableAdapter != null)) {
+                if ((this._healthCenterTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._hOInitialBalanceTableAdapter != null)) {
+                if ((this._hCInitialBalanceTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -4329,21 +4340,21 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM HOInitialBalance WHERE (Medicine
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateUpdatedRows(MedicineInventoryDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._medicineTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Medicine.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._medicineTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._purchaseTransactionTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.PurchaseTransaction.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._purchaseTransactionTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._healthCenterTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.HealthCenter.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._healthCenterTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -4356,12 +4367,12 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM HOInitialBalance WHERE (Medicine
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._hOInitialBalanceTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.HOInitialBalance.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._hCInitialBalanceTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.HCInitialBalance.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._hOInitialBalanceTableAdapter.Update(updatedRows));
+                    result = (result + this._hCInitialBalanceTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -4375,19 +4386,19 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM HOInitialBalance WHERE (Medicine
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateInsertedRows(MedicineInventoryDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._medicineTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Medicine.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._medicineTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._purchaseTransactionTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.PurchaseTransaction.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._purchaseTransactionTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._healthCenterTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.HealthCenter.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._healthCenterTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -4399,11 +4410,11 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM HOInitialBalance WHERE (Medicine
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._hOInitialBalanceTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.HOInitialBalance.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._hCInitialBalanceTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.HCInitialBalance.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._hOInitialBalanceTableAdapter.Update(addedRows));
+                    result = (result + this._hCInitialBalanceTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -4417,11 +4428,11 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM HOInitialBalance WHERE (Medicine
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateDeletedRows(MedicineInventoryDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._hOInitialBalanceTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.HOInitialBalance.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._hCInitialBalanceTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.HCInitialBalance.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._hOInitialBalanceTableAdapter.Update(deletedRows));
+                    result = (result + this._hCInitialBalanceTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -4433,19 +4444,19 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM HOInitialBalance WHERE (Medicine
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._healthCenterTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.HealthCenter.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._healthCenterTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._purchaseTransactionTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.PurchaseTransaction.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._purchaseTransactionTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._medicineTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Medicine.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._medicineTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -4498,13 +4509,13 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM HOInitialBalance WHERE (Medicine
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._medicineTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._medicineTableAdapter.Connection) == false))) {
+            if (((this._healthCenterTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._healthCenterTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._hOInitialBalanceTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._hOInitialBalanceTableAdapter.Connection) == false))) {
+            if (((this._hCInitialBalanceTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._hCInitialBalanceTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -4558,22 +4569,22 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM HOInitialBalance WHERE (Medicine
                         adaptersWithAcceptChangesDuringUpdate.Add(this._othersTransactionTableAdapter.Adapter);
                     }
                 }
-                if ((this._medicineTableAdapter != null)) {
-                    revertConnections.Add(this._medicineTableAdapter, this._medicineTableAdapter.Connection);
-                    this._medicineTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._medicineTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._medicineTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._medicineTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._medicineTableAdapter.Adapter);
+                if ((this._healthCenterTableAdapter != null)) {
+                    revertConnections.Add(this._healthCenterTableAdapter, this._healthCenterTableAdapter.Connection);
+                    this._healthCenterTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._healthCenterTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._healthCenterTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._healthCenterTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._healthCenterTableAdapter.Adapter);
                     }
                 }
-                if ((this._hOInitialBalanceTableAdapter != null)) {
-                    revertConnections.Add(this._hOInitialBalanceTableAdapter, this._hOInitialBalanceTableAdapter.Connection);
-                    this._hOInitialBalanceTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._hOInitialBalanceTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._hOInitialBalanceTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._hOInitialBalanceTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._hOInitialBalanceTableAdapter.Adapter);
+                if ((this._hCInitialBalanceTableAdapter != null)) {
+                    revertConnections.Add(this._hCInitialBalanceTableAdapter, this._hCInitialBalanceTableAdapter.Connection);
+                    this._hCInitialBalanceTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._hCInitialBalanceTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._hCInitialBalanceTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._hCInitialBalanceTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._hCInitialBalanceTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -4642,13 +4653,13 @@ SELECT MedicineID, Medicine, UOM, ItemCode FROM HOInitialBalance WHERE (Medicine
                     this._othersTransactionTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._othersTransactionTableAdapter]));
                     this._othersTransactionTableAdapter.Transaction = null;
                 }
-                if ((this._medicineTableAdapter != null)) {
-                    this._medicineTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._medicineTableAdapter]));
-                    this._medicineTableAdapter.Transaction = null;
+                if ((this._healthCenterTableAdapter != null)) {
+                    this._healthCenterTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._healthCenterTableAdapter]));
+                    this._healthCenterTableAdapter.Transaction = null;
                 }
-                if ((this._hOInitialBalanceTableAdapter != null)) {
-                    this._hOInitialBalanceTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._hOInitialBalanceTableAdapter]));
-                    this._hOInitialBalanceTableAdapter.Transaction = null;
+                if ((this._hCInitialBalanceTableAdapter != null)) {
+                    this._hCInitialBalanceTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._hCInitialBalanceTableAdapter]));
+                    this._hCInitialBalanceTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
