@@ -159,7 +159,17 @@ namespace Medicine_Inventory
             hideSubMenu();
         }
 
+        private void btnSetupHC_Click(object sender, EventArgs e)
+        {
+            openChildForm(new formSetupHealthCenter());
+            hideSubMenu();
+        }
+
+
+
+
         #endregion
+
 
     }
 }

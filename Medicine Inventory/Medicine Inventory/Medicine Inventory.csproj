@@ -132,6 +132,12 @@
     <Compile Include="formPurchaseOrder.Designer.cs">
       <DependentUpon>formPurchaseOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="formSetupHealthCenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formSetupHealthCenter.Designer.cs">
+      <DependentUpon>formSetupHealthCenter.cs</DependentUpon>
+    </Compile>
     <Compile Include="MedicineInventoryDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -168,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formSetup.resx">
       <DependentUpon>formSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formSetupHealthCenter.resx">
+      <DependentUpon>formSetupHealthCenter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

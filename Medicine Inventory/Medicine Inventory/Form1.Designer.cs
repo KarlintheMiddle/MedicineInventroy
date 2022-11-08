@@ -30,6 +30,7 @@
         {
             this.pnlSideMenuBar = new System.Windows.Forms.Panel();
             this.panelSetupSubMenu = new System.Windows.Forms.Panel();
+            this.btnSetupHC = new System.Windows.Forms.Button();
             this.btnSetupHealthOffice = new System.Windows.Forms.Button();
             this.btnSetupHealthCenter = new System.Windows.Forms.Button();
             this.btnSetupMenu = new System.Windows.Forms.Button();
@@ -71,6 +72,7 @@
             // panelSetupSubMenu
             // 
             this.panelSetupSubMenu.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.panelSetupSubMenu.Controls.Add(this.btnSetupHC);
             this.panelSetupSubMenu.Controls.Add(this.btnSetupHealthOffice);
             this.panelSetupSubMenu.Controls.Add(this.btnSetupHealthCenter);
             this.panelSetupSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
@@ -78,6 +80,23 @@
             this.panelSetupSubMenu.Name = "panelSetupSubMenu";
             this.panelSetupSubMenu.Size = new System.Drawing.Size(284, 201);
             this.panelSetupSubMenu.TabIndex = 6;
+            // 
+            // btnSetupHC
+            // 
+            this.btnSetupHC.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSetupHC.FlatAppearance.BorderSize = 0;
+            this.btnSetupHC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetupHC.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetupHC.ForeColor = System.Drawing.Color.Snow;
+            this.btnSetupHC.Location = new System.Drawing.Point(0, 92);
+            this.btnSetupHC.Name = "btnSetupHC";
+            this.btnSetupHC.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnSetupHC.Size = new System.Drawing.Size(284, 46);
+            this.btnSetupHC.TabIndex = 6;
+            this.btnSetupHC.Text = "Health Center Setup";
+            this.btnSetupHC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSetupHC.UseVisualStyleBackColor = true;
+            this.btnSetupHC.Click += new System.EventHandler(this.btnSetupHC_Click);
             // 
             // btnSetupHealthOffice
             // 
@@ -361,6 +380,7 @@
         private System.Windows.Forms.Panel panelSetupSubMenu;
         private System.Windows.Forms.Button btnSetupHealthOffice;
         private System.Windows.Forms.Button btnSetupHealthCenter;
+        private System.Windows.Forms.Button btnSetupHC;
     }
 }
 
